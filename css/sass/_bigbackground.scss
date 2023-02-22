@@ -1,0 +1,231 @@
+.GemaBigbackground{
+  &-image{
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+    @include mobile{
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+  &-header{
+    position: relative;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 84px;
+    @include tablet{
+      padding-top: 6vw;
+    }
+    @include mobile{
+      padding-top: 0;
+      height: auto;
+    }
+    &-title{
+      @include text($serif, 7, $blanco, $black);
+      line-height: 1;
+      font-style: italic;
+      text-align: center;
+      width: 770px;
+      @include tablet{
+        width: 55vw;
+      }
+      @include mobile{
+        width: 90vw;
+        font-size: var(--fuente5_mobile);
+        padding-top: calc(50vh - 20vw);
+      }
+    }
+    &-subtitle{
+      @include text($sans, 3, $blanco, $light);
+      text-align: center;
+      letter-spacing: 3px;
+      @include mobile{
+        font-size: var(--fuente1_mobile);
+        padding-bottom: calc(50vh - 20vw);
+        letter-spacing: .3vw;
+      }
+    }
+    &-text{
+      margin: 0 auto;
+      padding: var(--fuente3) 0;
+      text-align: center;
+      width: 770px;
+      @include tablet{
+        padding: var(--fuente3_tablet) 0;
+        width: 55vw;
+      }
+      @include mobile{
+        padding: var(--fuente0_mobile) 0;
+        width: 90vw;
+      }
+      & p{
+        @include text($serif, 0, $blanco, $regular);
+        margin-top: var(--fuente1);
+        margin-bottom: var(--fuente1);
+        @include mobile{
+          margin-top: var(--fuente0_mobile);
+          margin-bottom: var(--fuente0_mobile);
+        }
+      }
+    }
+    &-arrow{
+      width: 42px;
+      @include tablet{
+        width: 3vw;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+  &-circlemenu{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: 0 auto;
+    @include mobile{
+      width: max-content;
+      transition-duration: .5s;
+    }
+    &-container{
+      @include mobile{
+        position: relative;
+        width: 80vw;
+        overflow: hidden;
+        margin: 5vw auto 15vw;
+      }
+      &-button{
+        display: none;
+        @include mobile{
+          display: block;
+          position: absolute;
+          z-index: 10;
+          border: none;
+          background-color: transparent;
+          top: calc(50% - 10vw);
+        }
+        & img{
+          width: 6vw;
+        }
+        &.left{
+          transform: rotate(90deg);
+          left: 0;
+        }
+        &.right{
+          transform: rotate(-90deg);
+          right: 0;
+        }
+      }
+    }
+    &-element{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition-duration: .5s;
+      width: 200px;
+      @include mobile{
+        width: 80vw;
+      }
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.02);
+      }
+      &-image{
+        width: 200px;
+        @include mobile{
+          display: block;
+          margin: 0 auto;
+          width: 60vw;
+        }
+      }
+      &-subtitle{
+        @include text($sans, 0, $blanco, $regular);
+        text-align: center;
+        width: 100%;
+        margin-top: var(--fuente0);
+      }
+      &-title{
+        @include text($sans, 0, $blanco, $black);
+        text-align: center;
+        width: 100%;
+        margin-top: var(--fuente-4);
+      }
+    }
+  }
+  &-footer{
+    position: relative;
+    z-index: 5;
+    width: 1080px;
+    margin: 48px auto 0;
+    border-top: solid $blanco 1px;
+    padding-top: var(--fuente4);
+    @include mobile{
+      width: 90vw;
+      margin: 0 auto;
+      padding: 0 0 30vw;
+      border-width: .3vw;
+    }
+    &-elements{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-bottom: var(--fuente4);
+      @include mobile{
+        padding: var(--fuente4_mobile) 0;
+        align-items: flex-start;
+      }
+      &-item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        max-width: 33%;
+        justify-content: center;
+        align-items: center;
+        @include mobile{
+          max-width: 29vw;
+        }
+        &-text{
+          width: 100%;
+          @include text($sans, -1, $blanco, $regular);
+          margin-bottom: var(--fuente1);
+          text-align: center;
+          @include mobile{
+            margin-bottom: var(--fuente1_mobile);
+            font-size: var(--fuente-2_mobile);
+          }
+        }
+        &-image{
+          height: 70px;
+          max-width: 190px;
+          margin: 0 var(--fuente-3);
+          object-fit: contain;
+          @include mobile{
+            width: 20vw;
+            max-height: 10vw;
+          }
+        }
+      }
+    }
+    &-text{
+      @include text($sans, -2, $blanco, $regular);
+      padding-bottom: var(--fuente-2);
+      text-align: center;
+      @include mobile{
+        padding-bottom: var(--fuente-1_mobile);
+      }
+    }
+  }
+}

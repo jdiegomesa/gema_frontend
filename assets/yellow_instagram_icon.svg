@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffdc00"/>
+      <stop offset="1" stop-color="#ffa627"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c2c2c"/>
+      <stop offset="1" stop-color="#656565"/>
+    </linearGradient>
+  </defs>
+  <g id="IG_BASE" data-name="IG BASE" transform="translate(-924 -1088)">
+    <circle id="Elipse_13" data-name="Elipse 13" cx="21" cy="21" r="21" transform="translate(924 1088)" fill="url(#linear-gradient)"/>
+    <g id="Grupo_45" data-name="Grupo 45" transform="translate(382.461 568.461)">
+      <path id="Unión_4" data-name="Unión 4" d="M5.877,19.941C2.242,19.774.228,17.755.06,14.122.01,13.056,0,12.716,0,10S.01,6.944.06,5.878C.228,2.242,2.245.226,5.877.062,6.946.012,7.284,0,10,0s3.056.012,4.124.061c3.635.166,5.654,2.188,5.817,5.816C19.99,6.944,20,7.285,20,10s-.01,3.056-.059,4.122c-.166,3.637-2.188,5.651-5.817,5.818C13.056,19.989,12.717,20,10,20S6.946,19.989,5.877,19.941ZM5.96,1.86c-2.712.124-3.976,1.409-4.1,4.1C1.813,7.014,1.8,7.33,1.8,10s.012,2.986.059,4.042c.124,2.685,1.382,3.975,4.1,4.1,1.054.047,1.371.058,4.041.058s2.988-.009,4.042-.057c2.713-.124,3.975-1.411,4.1-4.1.048-1.055.057-1.371.057-4.041s-.009-2.986-.057-4.039c-.124-2.691-1.389-3.978-4.1-4.1C12.988,1.813,12.67,1.8,10,1.8S7.014,1.813,5.96,1.86ZM4.865,10A5.135,5.135,0,1,1,10,15.135,5.136,5.136,0,0,1,4.865,10Zm1.8,0A3.334,3.334,0,1,0,10,6.666,3.334,3.334,0,0,0,6.666,10ZM14.14,4.662a1.2,1.2,0,1,1,1.2,1.2A1.2,1.2,0,0,1,14.14,4.662Z" transform="translate(552.539 530.539)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

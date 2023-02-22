@@ -1,0 +1,32 @@
+-var title = 'Base'
+-var titulo = 'Servicios de salud sexual y reproductiva en Colombia'
+-var subtitulo = 'Para dar con la institución de tu interés y sus datos de contacto, selecciona el departamento, municipio o servicio. También puedes filtrar cuáles atienden a migrantes en condición irregular y si son públicas o privadas.'
+-var type = 'Base de datos'
+- var headerimage = "url('../img/fondo2.svg')"
+
+doctype html
+html
+  include ./components/_head.pug
+  body.darkbackground
+    //- Menú sidebar
+    include ./components/_sidemenu.pug
+    main.GemaInfonote(style="--note_color: #801AAF;")
+      //- Header de nota
+      include ./components/_noteheader.pug
+      include ./components/_database.pug
+    //- Menú compartir
+    include ./components/_socialmenu.pug
+    include ./components/_creditsmodal.pug
+    a.GemaInfonote-fixedbutton.small(href="#" onclick="Gemaopen('disclamermodal');")
+      img(src="https://gema.media/wp-content/themes/gema-media/assets/alert_yellow_icon.svg")
+    a.GemaInfonote-fixedbutton.big.hidden#MigrantesBot
+      img(src="https://gema.media/wp-content/uploads/2022/08/BOT-1.svg", alt="¿Conoces nuestro bot de Whatsapp?")
+    .GemaInfonote-modal#disclamermodal(onclick="validateTarget(Gemaopen, 'disclamermodal');")
+      .GemaInfonote-modal-container 
+        p.GemaInfonote-modal-text Fuentes: Ministerio de Salud y Plataforma R4V 
+        p.GemaInfonote-modal-text Esta base de datos presenta los servicios registrados en el Registro Especial de Prestadores de Servicios de Salud (REPS)* asociados a la salud sexual y a la salud reproductiva, y las entidades habilitadas para prestarlos, según la información que las entidades departamentales y distritales de salud reportaron a mayo de 2022. Además, incluye las organizaciones y servicios que agrupa la Plataforma de Coordinación Interagencial para Refugiados de Venezuela (Plataforma R4V) a través del Grupo Interagencial sobre Flujos Migratorios Mixtos (GIFMM), coliderado por la OIM y Acnur.
+        p.GemaInfonote-modal-text *El REPS no cuenta con información específica o claramente accesible sobre sexología, productos de salud menstrual, control posparto e interrupción voluntaria del embarazo.
+    script(src="https://gema.media/wp-content/themes/gema-media/js/gema.js") 
+    script(src="https://gema.media/wp-content/especiales/migrantes_salud_sexual/modules.js") 
+    script(src="https://gema.media/wp-content/especiales/migrantes_salud_sexual/gema_migrantes_db.js")
+    

@@ -1,0 +1,113 @@
+.GemaMainmenu{
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  vertical-align: top;
+  transition-duration: 1s;
+  &-container{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    padding: 5vh 2.5vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 1s;
+  }
+  &-mobile{
+    display: none;
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-icon{
+    width: 80%;
+  }
+  &-hamb{
+    background-color: transparent;
+    border: none;
+    margin-top: 2vh;
+  }
+  &-logo{
+    width: 10vw;
+    margin: 0 auto;
+    & img{
+      width: 100%;
+    }
+    @include mobile{
+      display: none;
+      width: 35vw;
+    }
+  }
+  &-footer{
+    width: 100%;
+    @include mobile{
+      width: 35vw;
+      margin: 0 auto;
+    }
+    &-who{
+      @include text($sans, 0, $blanco, $light);
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      text-align: center;
+      padding-bottom: 2vh;
+      &:hover{
+        text-decoration: underline;
+      }
+      @include mobile{
+        font-size: var(--fuente-1_mobile);
+        text-decoration: underline;
+        text-underline-offset: 1vw;
+      }
+    }
+    &-social{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &-element{
+        cursor: pointer;
+        transition-duration: .5;
+        width: 2vw;
+        @include mobile{
+          width: 6vw;
+          margin-top: 2vw;  
+        }
+        &:hover{
+          transform: scale(1.05);
+        }
+        & img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include mobile{
+    &:not(.opened){
+      & .GemaMainmenu-items{
+        display: none;
+      }
+      & .GemaMainmenu-footer{
+        display: none;
+      }
+      & .GemaMainmenu-mobile{
+        display: flex;
+      }
+    }
+    &.opened{
+      width: 100vw;
+      background-color: #fff7;
+      & .GemaMainmenu-container{
+        width: 45vw;
+      }
+      & .GemaMainmenu-logo{
+        display: block;
+      }
+    }
+  }
+}

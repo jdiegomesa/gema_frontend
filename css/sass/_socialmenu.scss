@@ -1,0 +1,33 @@
+.GemaSocialmenu{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10vh;
+  @include mobile{
+    right: initial;
+    left: 3vw;
+    padding-bottom: 0;
+  }
+  &-item{
+    cursor: pointer;
+    margin: 4px 0;
+    transition-duration: .5s;
+    @include mobile{
+      margin: 1vw 0;
+    }
+    &:hover{
+      transform: scale(1.1);
+    }
+    &-icon{
+      width: 30px;
+      @include mobile{
+        width: 6vw;
+      }
+    }
+  }
+}

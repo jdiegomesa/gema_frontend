@@ -1,0 +1,202 @@
+- var title = 'Nota'
+- var titulo = 'Así es migrar y vivir con VIH en Colombia'
+- var subtitulo = 'Los migrantes en condición de irregularidad con este virus son discriminados, no tienen ingresos ni tampoco información suficiente para acceder al sistema de salud y recibir una atención integral. Lo cuentan tres venezolanos entre miles.'
+- var type = 'Reportaje'
+- var autor = 'Luisa Fernanda Gómez Cruz'
+- var headerimage = "url('../img/fondo1.svg')"
+
+doctype html
+html
+  include ./components/_head.pug
+  body.greybackground
+    //- Menú sidebar
+    include ./components/_sidemenu.pug
+    main.GemaInfonote(style="--note_color: #801AAF;")
+      //- Header de nota
+      include ./components/_noteheader.pug
+      .GemaInfonote-content
+        .GemaInfonote-content-text
+          p <b>Manuel Fernández del Castillo*</b> llevaba varias semanas con diarrea y sospechó que la causa era el virus de inmunodeficiencia humana (VIH). Conocía el tema. Había dado talleres sobre infecciones de transmisión sexual mientras era defensor de derechos humanos en Venezuela, mucho antes de migrar a Colombia.
+          p En cuanto pudo, se realizó la prueba y sus sospechas fueron confirmadas en un laboratorio privado de Santa Marta. Con mucho miedo recibió su resultado: positivo. La enfermera que le dio el diagnóstico le dijo que no podrían ayudarlo: <i>“No tenemos cómo vincularte al sistema de salud. Tienes que hacer el proceso de regularización en el país para que te atiendan”</i>. 
+          .GemaInfonote-content-sidebar-element.stickyElement
+            img(src="https://gema.media/wp-content/uploads/2022/08/infografia1.svg", alt="")
+            p.GemaInfonote-content-sidebar-element-text del total de migrantes provenientes de Venezuela que viven con VIH atendidos en los servicios de salud <b>son mujeres</b>. 
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: RIPS
+          p Hasta el momento no se ha encontrado cura ni vacuna para el VIH, pero existen tratamientos que permiten vivir con la infección sin desarrollar el síndrome de inmunodeficiencia adquirida (sida), igual que quien sobrelleva una enfermedad crónica, como la diabetes. Manuel necesitaba el tratamiento antirretroviral (TAR), que impide que el virus se reproduzca y sea transmisible, pero no tenía cómo pagarlo ni podía vincularse al sistema de salud colombiano para acceder a los medicamentos. Había llegado a Colombia en 2016, cuatro años antes del diagnóstico, y vivía en condición de irregularidad trabajando como vendedor ambulante, luego recogiendo platos en un restaurante de jueves a domingo, y rebuscando en otros oficios el resto de la semana.
+          p Para 2017, al menos 109 personas provenientes de Venezuela que vivían con VIH habían recibido atención en Colombia. En 2021 ya eran 5.316, de acuerdo con los Registros Individuales de Prestación de Servicios de Salud (RIPS), pero el total de esta población con la infección se desconoce.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-title 89 
+            p.GemaInfonote-content-sidebar-element-text personas provenientes de Venezuela con enfermedad por VIH fallecieron en Colombia entre 2010 y 2020.
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: SISPRO
+          p Manuel salió de Venezuela como perseguido político y entró a Colombia por Maicao, en el departamento de La Guajira, una región desértica con frontera porosa. Como él, más de #[a(href="https://www.r4v.info/es/home" target="_blank") seis millones] de personas han huido de la crisis humanitaria que vive Venezuela, muchas de ellas en situaciones vulnerables.
+          p Dejusticia, un centro de estudios jurídicos y sociales, señaló en una #[a(href="https://www.dejusticia.org/litigation/las-barreras-administrativas-constituyen-discriminacion-institucional-indirecta-a-los-migrantes-venezolanos/" target="_blank") intervención ante la Corte Constitucional en 2019] que el requisito de regularizar la estadía en Colombia impacta en especial a las personas con enfermedades crónicas, cuyo bienestar y vida peligran por la interrupción de tratamientos vitales. Para la organización, anteponer la condición de estar regularizado para acceder a servicios de salud y a otros derechos fundamentales constituye un acto de discriminación institucional indirecto contra los migrantes venezolanos.
+          p Manuel vivió esa discriminación al tener que costear un laboratorio privado para acceder a la prueba diagnóstica y al no recibir la atención y tratamiento médicos para no desarrollar el sida.
+          //- INFGOGRAFÍA 1 
+          .GemaInfonote-content-infog1 
+            .GemaInfonote-content-infog1-content 
+              p.GemaInfonote-content-infog1-content-title Dos sentencias importantes
+              p.GemaInfonote-content-infog1-content-text La Corte Constitucional ha reconocido la importancia de proveer el tratamiento antirretroviral a migrantes sin importar su estatus migratorio.
+            .GemaInfonote-content-infog1-slider 
+              .GemaInfonote-content-infog1-slider-container#GemaMigrantesInf1(data-position="1")
+                .GemaInfonote-content-infog1-slider-element.GemaMigrantesInf1-element 
+                  p.GemaInfonote-content-infog1-slider-element-title T-246 de 2020
+                  p.GemaInfonote-content-infog1-slider-element-text Liz*, una mujer migrante en situación irregular, puso una tutela en 2019 después de que en un servicio de urgencias le negaran el tratamiento antirretroviral tras ser diagnosticada con VIH.  
+                  p.GemaInfonote-content-infog1-slider-element-text La corte falló casi nueve meses después y reconoció que las personas con VIH necesitan acceder al tratamiento independientemente de su estatus migratorio. Ya antes había señalado que esta atención incluye subsidiarles el tratamiento para "enfermedades catastróficas" cuando no tienen los recursos necesarios y si lo ordena el médico en caso de que un retraso pueda poner en riesgo su vida.
+                .GemaInfonote-content-infog1-slider-element.GemaMigrantesInf1-element
+                  p.GemaInfonote-content-infog1-slider-element-title T-496 de 2020
+                  p.GemaInfonote-content-infog1-slider-element-text El tribunal después fue más allá y le advirtió al Ministerio de Salud que debía implementar una política de atención a las personas migrantes en condición irregular que viven con VIH.
+                  p.GemaInfonote-content-infog1-slider-element-text En ambos casos, la corte entendió que existe una relación entre acceder al tratamiento antirretroviral y el derecho a la vida: si no se recibe tratamiento a tiempo, la vida de la persona con la enfermedad corre riesgo.
+                  p.GemaInfonote-content-infog1-slider-element-text Además, esto no es solo un tema individual. Si no se trata adecuadamente, puede convertirse en un problema de salud pública.
+              button.GemaInfonote-content-infog1-slider-arrow(onclick="GemamoveSlide('GemaMigrantesInf1', true)")
+                img(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+          p El Gobierno colombiano creó en 2021 el Estatuto Temporal de Protección para Migrantes Venezolanos (#[a(href="https://www.cancilleria.gov.co/sites/default/files/FOTOS2020/ok._esp-_abc_estatuto_al_migrante_venezolano-_05mar-2021.pdf" target="_blank") ETPV]), que permite que las personas provenientes de Venezuela obtengan el Permiso por Protección Temporal (PPT) para poder regularizarse. Pero el proceso toma meses y no todas las personas inscritas lo han obtenido: para el 20 de junio de 2022, de 2.384.203 venezolanos que habían iniciado el trámite, 1.090.926 recibieron el documento.
+          p El ETPV, además, solo acoge a los migrantes que ya se encontraban en situación irregular en Colombia hasta el 31 de enero de 2021. La directora de la Clínica Jurídica para Migrantes de la Universidad de los Andes, Laura Dib, cuestiona ese límite: <i>“¿Qué hacemos con las personas que ingresaron a Colombia a partir del 1 de febrero de 2021 de forma irregular y con los que siguen ingresando? Las necesidades de protección internacional de esta población no han cesado”</i>.
+          p Al no estar regularizado ni afiliado al sistema de salud, Manuel estuvo más de un año sin tratamiento. Cuenta que tuvo que vivir “con el desespero” de que le iba a pasar algo o de que se podía morir si no recibía tratamiento: “En ese tiempo, mi vida sexual se terminó”.
+          .GemaInfonote-content-imagetitle 
+            img.GemaInfonote-content-imagetitle-image(src="https://gema.media/wp-content/uploads/2022/08/Ilustraciones_1.svg")
+            h3.GemaInfonote-content-imagetitle-text  Regulares y sin acceso
+          p Las seis veces que Hendriel de Jesús Briceño ingresó a Colombia entre 2017 y 2018 para recibir sus medicamentos antirretrovirales contra el VIH entró por pasos de frontera legales. <i>“Y a pesar de que tenía el sello del pasaporte</i> —señala—, <i>no podía acceder a la salud en Colombia”. </i>
+          p En su última visita pendular, Hendriel se inscribió para obtener el Permiso Especial de Permanencia (PEP), un documento que le permitía residir en Colombia y acceder a la salud, educación y trabajo formal. Cuando regresó a Colombia en 2019 con la intención de quedarse, ya estaba regularizado: <i>“Y a pesar de que tenía el permiso especial de permanencia, no tenía acceso a la salud”</i>.
+          p Colombianos y migrantes deben estar afiliados al Sistema General de Seguridad Social en Salud para acceder a sus servicios. Pero no todos, ni colombianos ni migrantes, lo están. Según el director de aseguramiento del Ministerio de Salud, Iván Mesa, solo el 65% de las personas que tienen resuelta su situación migratoria pueden acceder a los servicios de salud en Colombia. Para Mesa, el proceso de afiliación es “absolutamente sencillo”. No obstante, reconoció que desde el ministerio han visto “una brecha y dificultad en el paso inicial, en empezar el camino de la regularización”.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-subtitle 1.090.926
+            p.GemaInfonote-content-sidebar-element-text personas cuentan con PPT. 
+            img(src="https://gema.media/wp-content/uploads/2022/08/Cifras-2.svg")
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: Ministerio de Salud
+          p Hendriel no tenía los ingresos para inscribirse al régimen contributivo. Durante un año se acercó a Capital Salud, una de las aseguradoras del régimen subsidiado (ofrecido por el Estado), para pedir que lo afiliaran. Sin embargo, le decían que no era posible porque le hacía falta el puntaje del Sistema de Identificación de Potenciales Beneficiarios de Programas Sociales (#[a(href="https://www.sisben.gov.co/Paginas/que-es-sisben.aspx" target="_blank") Sisbén]), que se utiliza para focalizar la inversión social y garantizar que sea asignada a quienes más lo necesitan.
+          p Los migrantes que llegan a Colombia también enfrentan discriminación y falta de información. A Hendriel no le explicaron qué era el Sisbén ni cómo registrarse: <i>“No, ustedes los de Venezuela no tienen derecho a la salud”</i>, fue la única respuesta que recibió de una enfermera.
+          p Iván Mesa explica que en este caso hubo un error en la ruta de afiliación al sistema <i>“porque todas las IPS [Instituciones Prestadoras de Salud] saben que si la persona tiene su documento de identificación válido, deben afiliarla”</i>. Hendriel no tenía Sisbén, pero según aclara el funcionario, se debía haber usado el mecanismo de #[a(href="https://www.minsalud.gov.co/proteccionsocial/Paginas/Afiliacion-Oficio.aspx" target="_blank") afiliación de oficio], que permite que el migrante acceda a los servicios mientras realiza la encuesta del Sisbén en máximo cuatro meses.
+          p Al final, Hendriel solo pudo acceder al tratamiento a través de las fundaciones y agencias de cooperación internacional en Colombia con las que se había vinculado desde que estaba en Venezuela. Pero una persona que vive con VIH necesita una atención integral:
+          //- INFOGRAFÍA 2
+          .GemaInfonote-content-infog2
+            .GemaInfonote-content-infog2-title Un tratamiento integral debe incluir:
+            .GemaInfonote-content-infog2-slider  
+              .GemaInfonote-content-infog2-slider-container#GemaMigrantesInf2(data-position="1")
+                .GemaInfonote-content-infog2-slider-element.GemaMigrantesInf2-element
+                  .GemaInfonote-content-infog2-slider-element-box
+                    p.GemaInfonote-content-infog2-slider-element-box-title Exámenes de inicio y seguimiento del tratamiento: 
+                    ul.GemaInfonote-content-infog2-slider-element-box-list 
+                      li Análisis de sangre completo
+                      li Medición de grasa en la sangre
+                      li Nivel de glucosa
+                      li Fosfatasa alcalina, una enzima que se produce sobre todo en el hígado 
+                      li Bilirrubinas
+                      li Información genética
+                      li Conteo de los glóbulos blancos que combaten infecciones 
+                      li Conteo de la cantidad de copias del virus de VIH
+                      li Pruebas para sífilis
+                      li Radiografía de tórax
+                      li Electrocardiogramas
+                      li Evaluaciones del riesgo cardiovascular
+                .GemaInfonote-content-infog2-slider-element.GemaMigrantesInf2-element
+                  .GemaInfonote-content-infog2-slider-element-box
+                    p.GemaInfonote-content-infog2-slider-element-box-title Revisión y evaluación por parte de: 
+                    ul.GemaInfonote-content-infog2-slider-element-box-list 
+                      li Médico experto en VIH
+                      li Especialista en infectología
+                      li Psiquiatría
+                      li Enfermería
+                      li Trabajo social
+                      li Psicología
+                  .GemaInfonote-content-infog2-slider-element-box
+                    p.GemaInfonote-content-infog2-slider-element-box-title Formular el tratamiento antirretroviral. 
+                    p.GemaInfonote-content-infog2-slider-element-box-text Existen 15 tipos de medicamentos que se pueden combinar en 45 esquemas
+                  .GemaInfonote-content-infog2-slider-element-box
+                    p.GemaInfonote-content-infog2-slider-element-box-title Vacunación
+                  .GemaInfonote-content-infog2-slider-element-box
+                    p.GemaInfonote-content-infog2-slider-element-box-title Leche de fórmula (para lactantes)
+              button.GemaInfonote-content-infog2-slider-arrow(onclick="GemamoveSlide('GemaMigrantesInf2', true)")
+                img(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+          p Según explica Jhon Ramírez, representante legal de la #[a(href="https://www.redsomos.org/" target="_blank") Fundación Red Somos], una organización de base comunitaria que trabaja con población LGBTIQ+ y personas que viven con VIH en Colombia, existen quince tipos de medicamentos que se pueden combinar en 45 esquemas. Para quien vive con VIH, su calidad de vida depende de dar con la combinación precisa y de contar con atención integral.
+          p Sin embargo, no todas las agencias y organizaciones cuentan con los medios y recursos para encontrar el esquema que necesita cada persona que apoyan. Además, solo atienden asuntos de la enfermedad crónica. Hendriel cuenta que en Colombia trabajaba con una bicicleta en Rappi, la plataforma de domicilios: <i> “Y ahí tampoco te daban [acceso a] salud. Si te madraste, te madraste, y tú verás cómo te pagas tus cosas”</i>.
+          p Fue solo hasta que puso una tutela contra Capital Salud que Hendriel logró afiliarse al sistema de salud colombiano y comenzó a recibir tratamiento y atención integral. <i>“Ahí yo dije ¿por qué uno tiene que recurrir a denunciar, a enfrentarse a las trabas para poder acceder a la salud?”</i>. 
+          .GemaInfonote-content-sidebar-element.stickyElement
+            img(src="https://gema.media/wp-content/uploads/2022/08/Cifras-3.svg")
+            p.GemaInfonote-content-sidebar-element-text de las tutelas radicadas por extranjeros entre 2018 y marzo de 2021 demandaban el derecho a la salud. 
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: Corte Constitucional
+          .GemaInfonote-content-imagetitle 
+            img.GemaInfonote-content-imagetitle-image(src="https://gema.media/wp-content/uploads/2022/08/Ilustraciones_2.svg")
+            h3.GemaInfonote-content-imagetitle-text ¿Qué se entiende por “urgencias médicas”?
+          p <b>Leonardo*</b> llegó al servicio de urgencias de un hospital en Barranquilla porque pensó que tenía dengue. Le daba fiebre y sudaba en exceso en la noche. Ya conocía los síntomas: los había padecido en cuatro ocasiones. Leonardo tenía en realidad VIH, aunque entonces no lo sabía. <i>“No podemos atenderte. No tienes un carné de la EPS [la entidad responsable del registro de los afiliados]. ¿A quién se le va a cobrar esta deuda de tu atención?”</i>, le dijo una enfermera en un centro de salud.
+          p En Colombia, cualquier persona que no esté afiliada al sistema, incluidos los migrantes en condición irregular, tiene derecho a ser atendida en el servicio de urgencias de los centros de salud. La dificultad está en determinar qué es una urgencia. 
+          p El VIH, por ejemplo, <i>“no está dentro de los primeros alcances de la atención en urgencias”</i>, asegura Iván Mesa, del Ministerio de Salud. Según explica, una persona puede ser atendida por urgencias si su vida está en un riesgo inminente por cuenta del virus, pero a través de este servicio no accederá al tratamiento antirretroviral ni a la atención integral.
+          p A raíz del fenómeno migratorio, la Corte Constitucional amplió en 2017 la #[a(href="https://www.minsalud.gov.co/Normatividad_Nuevo/Decreto%200780%20de%202016.pdf" target="_blank") definición] de “urgencia hospitalaria”: a través de varios #[a(href="https://www.corteconstitucional.gov.co/relatoria/2018/t-210-18.htm" target="_blank") pronunciamientos], desde ese año ha señalado que también es toda situación que ponga en riesgo la funcionalidad del cuerpo humano y la vida en condiciones de dignidad. Es decir, puede que la persona no esté al borde de la muerte cuando llegue a un servicio de urgencias, pero su condición podría matarla de mantenerse en el tiempo.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-text Las tutelas por parte de población extranjera en Colombia aumentaron de 
+            img(src="https://gema.media/wp-content/uploads/2022/08/Cifras-6.svg")
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: Corte Constitucional
+          p La corte ha señalado que, en casos extraordinarios, los servicios de urgencias pueden incluir procedimientos o intervenciones médicas para atender “enfermedades catastróficas”, como el cáncer o el VIH. Con esta decisión, abrió una ventana ante la falta de acciones del Ejecutivo y del Legislativo de cara a la población migrante en condición de irregularidad con VIH.
+          p Aun así, la jurisprudencia de la Corte Constitucional aplica solo para casos individuales y sirve para guiar a otros jueces a que tomen decisiones similares cuando reciben tutelas sobre el mismo tema. Pero determinar si un paciente con VIH debe ser atendido por urgencias todavía depende del concepto médico. <i>“Y si al médico le parece que lo tuyo no es una urgencia, pues no te va a garantizar el acceso al tratamiento”</i>, complementa Lucía Ramírez, investigadora de Dejusticia.
+          p Leonardo recuerda que un médico corrigió a la enfermera que le exigía el carné de la EPS. La salud, le decía, no se le niega a <i>“ningún individuo que venga de cualquier parte porque tenga o no tenga el carné”</i>. Esa intervención logró que Leonardo fuera atendido. Si hubiera dependido de la enfermera o de otro especialista, la historia podría haber sido distinta.
+          p Sin embargo, luego de que le hicieron la prueba y resultó positiva, otro médico volvió a dejar a Leonardo a la deriva: <i>“Tú tienes que tomarte una pastilla todos los días durante toda tu vida porque te va a garantizar que estés bien. Te voy a regalar los primeros veinte días de tratamiento. Después, tú verás qué haces”</i>.
+          .GemaInfonote-content-imagetitle 
+            img.GemaInfonote-content-imagetitle-image(src="https://gema.media/wp-content/uploads/2022/08/Ilustraciones_3.svg")
+            h3.GemaInfonote-content-imagetitle-text Apoyo limitado
+          p Organizaciones civiles y agencias de cooperación internacional ayudan a los migrantes en condición de irregularidad que viven con VIH en Colombia, que no encuentran atención en el sistema de salud o que no quieren acercarse a los servicios nacionales por miedo a ser deportados. Ambas, organizaciones y agencias, apoyan al Estado colombiano realizando pruebas diagnósticas, tratamiento para quienes contraen el virus y soporte para su vinculación al sistema de salud.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-title 300.000
+            p.GemaInfonote-content-sidebar-element-text <b>personas fueron atendidas</b> cada mes por el GIFMM con al menos un tipo de asistencia. 
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: Grupo Interagencial de Flujos Migratorios Mixtos (GIFMM)
+          p A través de esta ayuda, Manuel y Leonardo lograron regularizar su situación migratoria y afiliarse al sistema de salud para obtener la atención integral por medio del #[a(href="https://www.cancilleria.gov.co/autorizacion-prorroga-salvoconducto" target="_blank") salvoconducto SC-2] para refugiados.
+          //- INFGOGRAFÍA 1 
+          .GemaInfonote-content-infog1 
+            .GemaInfonote-content-infog1-content 
+              p.GemaInfonote-content-infog1-content-title Solicitud de refugio
+              p.GemaInfonote-content-infog1-content-text Otro mecanismo para que migrantes venezolanos en condición de irregularidad con una enfermedad crónica regularicen su estatus migratorio es a través de la solicitud del salvoconducto para refugiados.
+              p.GemaInfonote-content-infog1-content-text Sin embargo, para Laura Dib, de la Clínica de Migrantes de la Universidad de los Andes, cuando una persona en situación migratoria irregular acude a Migración Colombia fuera de las causales para acogerse al ETPV y sin una solicitud de refugio en curso, este mecanismo tiene tres problemas.
+            .GemaInfonote-content-infog1-slider 
+              .GemaInfonote-content-infog1-slider-container#GemaMigrantesInf3(data-position="1")
+                .GemaInfonote-content-infog1-slider-element.GemaMigrantesInf3-element 
+                  p.GemaInfonote-content-infog1-slider-element-bigtitle 1
+                  p.GemaInfonote-content-infog1-slider-element-text Es posible que Migración inicie un procedimiento administrativo sancionatorio. Mientras tanto, a la persona le entregan el salvoconducto de permanencia, pero el proceso administrativo puede terminar en multa, deportación o expulsión. 
+                .GemaInfonote-content-infog1-slider-element.GemaMigrantesInf3-element 
+                  p.GemaInfonote-content-infog1-slider-element-bigtitle 2
+                  p.GemaInfonote-content-infog1-slider-element-text Recibir el salvoconducto no faculta para trabajar formalmente.
+                .GemaInfonote-content-infog1-slider-element.GemaMigrantesInf3-element 
+                  p.GemaInfonote-content-infog1-slider-element-bigtitle 3
+                  p.GemaInfonote-content-infog1-slider-element-text Si un solicitante de reconocimiento de la situación de refugiado vuelve a su país de origen, Migración entiende desistida la solicitud y cancela el salvoconducto porque asume que el temor infundado que el migrante tenía de volver a su país cesó.
+              button.GemaInfonote-content-infog1-slider-arrow(onclick="GemamoveSlide('GemaMigrantesInf3', true)")
+                img(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+          p Para Iván Mesa, director de aseguramiento del Ministerio de Salud, es “entendible” que los entes territoriales remitan a los migrantes en condición de irregularidad a las agencias y organizaciones para que reciban atención lo antes posible. Pero hay regiones de Colombia, como el departamento de Nariño, donde el Estado parece asignarle toda la carga a esas instituciones.
+          p —¿Qué hacen con los migrantes que encuentran positivos a VIH en las jornadas de salud?
+          p —Irregulares, los canalizamos con las ONG. Afortunadamente, contamos con muchas que están operando aquí en el municipio—, explica Sandra Caicedo, referente de salud sexual y reproductiva de la Secretaría de Salud de Ipiales, cerca de la frontera con Ecuador.
+          p —¿Las entidades estatales se zafan de la responsabilidad por tener a las agencias?
+          p —En la ley, tenemos la responsabilidad de cumplir con los migrantes que están regularizados y así lo hacemos. A quien se puede afiliar, se le afilia. Pero si es irregular, hacemos la articulación que corresponde. La única manera de hacerlo es con las ONG. Si no las tuviéramos, sería complicadísimo, pero para eso están y para eso existen—, complementa Gabriela Chamorro, secretaria de Salud del mismo municipio.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-title 164.969
+            p.GemaInfonote-content-sidebar-element-text migrantes se beneficiaron de servicios de salud ofrecidos por 86 agencias de enero a marzo de 2022. 
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: GIFMM
+          p A pesar de que existen normas para la prevención de infecciones y enfermedades de interés en salud pública, <i>“de Arauca nos mandan pacientes a Bogotá a que les hagamos la prueba rápida para detectar el VIH. A que les pinchemos el dedo. Pero cada entidad territorial tiene un Plan de Intervenciones Colectivas y debe realizar pruebas de VIH, hepatitis B y sífilis”</i>, denuncia Liliana Andrade, directora de Aids Healthcare Foundation (#[a(href="https://www.aidshealth.org/global/colombia/" target="_blank") AHF]) en Colombia.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-subtitle Cerca del 
+            img(src="https://gema.media/wp-content/uploads/2022/08/Cifras-9.svg", alt="22%")
+            p.GemaInfonote-content-sidebar-element-text de toda la respuesta es implementada en actividades de salud. 
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: GIFMM
+          p El segundo inconveniente en torno a la atención de las agencias y organizaciones es que, ante las demoras en el proceso de regularización y de atención del sistema de salud, los migrantes prefieren mantenerse con los organismos de cooperación internacional. <i>“Con toda la razón del mundo</i> —dice Jhon Ramírez de Red Somos—, <i>si yo fuera diagnosticado, quisiera que mañana mismo me dieran el medicamento</i>”.
+          p <i>“No somos amigos de que la gente esté en Red Somos, Eudes, AHF, o Aids For Aids, porque somos organizaciones de sociedad civil. Y el sistema de salud del Estado debe tener una política de atención y robustecerse con recursos para que pueda dar respuesta de manera adecuada a las necesidades en salud de la población migrante”</i>, afirma también Ramírez.
+          .GemaInfonote-content-infog3
+            p.GemaInfonote-content-infog3.title ¿Cuánto tiempo toma acceder al tratamiento antirretroviral?
+            picture
+              source(srcset="https://gema.media/wp-content/uploads/2022/08/Infografia-3_mobile.svg " media="(max-width: 600px)")
+              source(srcset="https://gema.media/wp-content/uploads/2022/08/Infografia-3.svg" media="(min-width: 600px)")
+              img.GemaInfonote-content-fullimage(src="https://gema.media/wp-content/uploads/2022/08/Infografia-3.svg")
+            .GemaInfonote-content-infog3-scroll
+              img.GemaInfonote-content-infog3-scroll-img(src="https://gema.media/wp-content/uploads/2022/08/Infografia-3_dos.svg" alt="")
+            img.GemaInfonote-content-infog3-arrow(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+          p El tercer inconveniente es que las agencias de cooperación internacional tienen tiempo y recursos limitados para operar en los países que apoyan. En cuanto haya otra crisis que recuerde a la de Venezuela, se van a ir. <i>“La cooperación es finita y nosotros no podemos atenderlos a todos”</i>, concluye Liliana Andrade. <i>“Tenemos un tope máximo y, cuando llegue, ya no podremos hacer más pruebas, ni diagnosticar a más personas. Conviene que el Estado colombiano agilice el proceso de regularización de los migrantes para que las fundaciones podamos seguir ayudando”</i>.
+          .GemaInfonote-content-imagetitle 
+            img.GemaInfonote-content-imagetitle-image(src="https://gema.media/wp-content/uploads/2022/08/Ilustraciones_4.svg")
+            h3.GemaInfonote-content-imagetitle-text Un plan nacional
+          p En respuesta a un derecho de petición sobre las recomendaciones de la Corte Constitucional, el Ministerio de Salud informó que tiene un #[a(href="https://es.slideshare.net/Estrategia_VIH_Colombia/plan-nacional-de-respuesta-ante-las-its-el-vih-la-coinfeccion-tb-vih-y-las-hepatitis-b-y-c-20222025" target="_blank") Plan Nacional de Respuesta a las ITS - VIH/Sida (2022-2025)]. En él contempla como prioridad <i>“realizar la afiliación de las personas migrantes con VIH que tengan documento válido para hacerlo y apoyar a nivel territorial la regularización de quienes no la tengan”</i>. 
+          p Según señaló el ministerio en la misma respuesta, los entes encargados deben promover y gestionar la afiliación en salud de personas migrantes regularizadas que presentan VIH. Los recursos para conseguirlo provendrán del Fondo Mundial de Lucha Contra el Sida, la Tuberculosis y la Malaria, que para los próximos tres años invertirá cerca de veinte millones de dólares para el acceso a prevención y tratamiento de las personas migrantes.
+          p Iván Mesa, director de aseguramiento, señala que el Ministerio de Salud está trabajando en la creación de un fondo general para que el sistema pueda soportar el ingreso de más personas al régimen subsidiado. También para organizar la prestación de servicios de salud de la población migrante en condición irregular que está siendo atendida por agencias.
+          .GemaInfonote-content-sidebar-element.stickyElement
+            p.GemaInfonote-content-sidebar-element-text Migrantes afiliados al sistema de salud:  
+            img(src="https://gema.media/wp-content/uploads/2022/08/Cifras-10.svg")
+            p.GemaInfonote-content-sidebar-element-subtext Fuente: Ministerio de Salud
+          p Ambas soluciones, sin embargo, mantienen las barreras en la atención a los migrantes con VIH. La #[a(href="https://hivinfo.nih.gov/es/understanding-hiv/fact-sheets/cuando-empezar-el-tratamiento-antirretroviral" target="_blank") Organización Mundial de la Salud] sugiere empezar a tomar los medicamentos tan pronto sea diagnosticada la infección, pero el sistema en Colombia, de acuerdo con Red Somos y AHF, puede retrasarles el tratamiento entre tres y catorce meses a quienes están en condición irregular. Su salud puede peligrar durante ese tiempo, cuando podrían llevar una vida mejor pese a la enfermedad crónica.
+          p <i>*Los nombres de estas fuentes fueron cambiados para proteger su identidad.</i>
+    //- Menú compartir
+    include ./components/_socialmenu.pug
+    include ./components/_creditsmodal.pug
+    script(src="./gema.js")

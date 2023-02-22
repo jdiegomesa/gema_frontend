@@ -1,0 +1,71 @@
+-var title = 'Gema'
+
+doctype html
+html
+  include ./components/_head.pug
+  body
+    include ./components/_mainmenu.pug
+    h1.hidden Gema
+    section.GemaQuienes
+      p.GemaQuienes-text GEMA es una nueva iniciativa periodística con sede en Colombia que cubre temas de género, educación, migración y ambiente. Somos:
+      .GemaQuienes-elements
+        .GemaQuienes-elements-item(onclick="Gemaopen('modal');")
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+      p.GemaQuienes-quote “Para nosotros, GEMA es un laboratorio. Un espacio de innovación con colegas, medios aliados y organizaciones que nos apoyan para hacer periodismo de calidad”.
+      p.GemaQuienes-linetitle Colaborador@s
+      .GemaQuienes-elements
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+        .GemaQuienes-elements-item
+          img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
+          .GemaQuienes-elements-item-content 
+            p.GemaQuienes-elements-item-content-title Luisa Fernanda Gómez Cruz
+            p.GemaQuienes-elements-item-content-text Coordinadora y reportera
+    .GemaQuienes-modal#modal(onclick="validateTarget(Gemaopen, 'modal');")
+      .GemaQuienes-modal-container 
+        img.GemaQuienes-modal-image(src="./img/LUISA_GOMEZ.png")
+        .GemaQuienes-modal-info
+          p.GemaQuienes-modal-info-name Luisa Fernanda Gómez Cruz
+          p.GemaQuienes-modal-info-position Coordinadora y reportera 
+          p.GemaQuienes-modal-info-text Periodista y verificadora de datos. Miembro del #ConnectasHub. Ha publicado sus textos en Cuestión Pública, El Espectador, Volcánicas, Manifiesta Media, Bacánika, Colombiacheck y Semana. Ganadora del Concurso Regional de Periodismo #VivasNosQueremos en 2021 por el podcast Parir no es un juego de niñas, realizado con 070 y Manifiesta Media, y finalista del Premio Nacional de Periodismo del Círculo de Periodistas de Bogotá en 2017 por el trabajo Reporteros de paz. 21 testigos de negociaciones.
+        .GemaQuienes-modal-social
+          a.GemaQuienes-modal-social-icon(href="") 
+            img(src="./assets/instagram_softgrey_icon.svg", alt="")
+          a.GemaQuienes-modal-social-icon(href="") 
+            img(src="./assets/instagram_softgrey_icon.svg", alt="")
+          a.GemaQuienes-modal-social-icon(href="") 
+            img(src="./assets/instagram_softgrey_icon.svg", alt="")
+          a.GemaQuienes-modal-social-icon(href="") 
+            img(src="./assets/instagram_softgrey_icon.svg", alt="")
+    script(src="./gema.js") 

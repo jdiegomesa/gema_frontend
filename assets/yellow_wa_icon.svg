@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffdc00"/>
+      <stop offset="1" stop-color="#ffa627"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2c2c2c"/>
+      <stop offset="1" stop-color="#656565"/>
+    </linearGradient>
+  </defs>
+  <g id="WP_BASE" data-name="WP BASE" transform="translate(-1825 -823)">
+    <circle id="Elipse_12" data-name="Elipse 12" cx="21" cy="21" r="21" transform="translate(1825 823)" fill="url(#linear-gradient)"/>
+    <path id="Unión_3" data-name="Unión 3" d="M1.412,14.928A9.951,9.951,0,1,1,5.277,18.7L0,20.084Zm8.62,3.3a8.251,8.251,0,1,0-6.808-3.563L2.389,17.72,5.52,16.9A8.343,8.343,0,0,0,10.032,18.23Zm1.628-3.636a14.646,14.646,0,0,1-1.418-.524,11.111,11.111,0,0,1-4.248-3.755A4.843,4.843,0,0,1,4.979,7.744a2.8,2.8,0,0,1,.87-2.076.915.915,0,0,1,.664-.313l.476.009h.054c.145,0,.326,0,.506.427.208.5.7,1.722.767,1.846a.457.457,0,0,1,.02.436,1.647,1.647,0,0,1-.249.414l-.373.435c-.124.124-.254.259-.108.508a7.42,7.42,0,0,0,1.383,1.722,6.78,6.78,0,0,0,2,1.235c.249.124.394.1.538-.063s.623-.726.788-.974.33-.208.559-.124,1.452.684,1.7.809.415.186.477.29a2.1,2.1,0,0,1-.145,1.186,2.558,2.558,0,0,1-1.678,1.183,4.094,4.094,0,0,1-.6.047A3.181,3.181,0,0,1,11.66,14.594Z" transform="translate(1836.842 833.339)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>

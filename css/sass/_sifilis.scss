@@ -1,0 +1,762 @@
+.GemaSifilis{
+  &-header{
+    position: relative;
+    z-index: 50;
+    width: 100vw;
+    height: 169vw;
+    @include mobile{
+      height: 649vw;
+    }
+    &-image{
+      width: 100vw;
+      position: absolute;
+      z-index: 50;
+    }
+    &-logos{
+      position: absolute;
+      z-index: 55;
+      right: 14vw;
+      top: 20vw;
+      width: 30vw;
+      @include mobile{
+        right: 12.5vw;
+        top: 145vw;
+        width: 75vw;
+      }
+    }
+    &-title{
+      @include text($serif, 6, $blanco, $black);
+      font-style: italic;
+      line-height: 1;
+      text-align: center;
+      position: absolute;
+      z-index: 55;
+      width: 30vw;
+      right: 15vw;
+      top: 27vw;
+      @include mobile{
+        width: 80vw;
+        right: 10vw;
+        top: 164vw;
+        font-size: var(--fuente5_mobile);
+      }
+    }
+    &-subtitle{
+      @include text($sans, 3, $blanco, $light);
+      text-align: center;
+      width: 40vw;
+      position: absolute;
+      right: 10vw;
+      top: 37vw;
+      letter-spacing: 3px;
+      z-index: 55;
+      @include mobile{
+        width: 80vw;
+        right: 10vw;
+        top: 192vw;
+        letter-spacing: 2px;
+        font-size: var(--fuente2_mobile);
+      }
+    }
+    &-firsttext{
+      @include text($sans, 1, $blanco, $light);
+      font-style: italic;
+      width: 30vw;
+      position: absolute;
+      right: 17vw;
+      top: 78vw;
+      z-index: 55;
+      line-height: 1.3;
+      @include mobile{
+        width: 65vw;
+        right: auto;
+        left: 10vw;
+        top: 378vw;
+        font-size: var(--fuente0);
+      }
+    }
+    &-secondtext{
+      @include text($sans, 1, $blanco, $light);
+      font-style: italic;
+      width: 30vw;
+      position: absolute;
+      left: 15vw;
+      top: 138vw;
+      z-index: 55;
+      line-height: 1.3;
+      @include mobile{
+        width: 65vw;
+        left: auto;
+        right: 10vw;
+        top: 592vw;
+        font-size: var(--fuente0);
+      }
+    }
+  }
+  &-footer{
+    margin: 20px auto 0;
+    position: relative;
+    border-top: solid 1px $color_fuente;
+    width: 1000px;
+    padding: 50px 0;
+    @include mobile{
+      border-top-width: .1vw;
+      width: 80vw;
+      padding: 5vw 0;
+      margin-top: 3vw;
+    }
+    &-text{
+      @include text;
+      text-align: center;
+      width: 500px;
+      @include mobile{
+        width: 100%;
+        font-size: var(--fuente-1_mobile);
+      }
+      &-spaced{
+        margin-top: 20px;
+      }
+    }
+    &-img{
+      height: 80px;
+      display: block;
+      margin: 30px auto 0;
+      @include mobile{
+        height: auto;
+        width: 100%;
+        max-height: 13vw;
+        object-fit: contain;
+      }
+    }
+    &-imgs{
+      height: 80px;
+      width: 450px;
+      display: flex;
+      justify-content: space-between;
+      margin: 30px auto 0;
+      @include mobile{
+        height: auto;
+        width: 80vw;
+      }
+      &-item{
+        height: 100%;
+        object-fit: contain;
+        @include mobile{
+          max-height: 13vw;
+          width: 38vw;
+        }
+      }
+    }
+
+  }
+  &-icon{
+    &-big{
+      position: absolute;
+      width: 200px;
+      @include mobile{
+        width: 37vw;
+      }
+    }
+    &-medium{
+      position: absolute;
+      width: 150px;
+       @include mobile{
+        width: 27vw;
+      }
+    }
+    &-small{
+      position: absolute;
+      width: 100px;
+    }
+  }
+  &-slider{
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+    @include mobile{
+      width: 70vw;
+      margin-left: 5vw;
+    }
+    &-container{
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      transition-duration: .5s;
+    }
+    &-element{
+      width: 700px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include mobile{
+        flex-direction: column;
+        width: 70vw;
+      }
+      &-image{
+        width: 340px;
+        @include mobile{
+          width: 70vw;
+        }
+      }
+      &-info{
+        width: 340px;
+        @include mobile{
+          width: 70vw;
+        }
+        &-title{
+          @include text($sans, 0, $azul_violeta, $bold);
+          padding-bottom: var(--fuente1);
+          @include mobile{
+            padding: var(--fuente1_mobile) 0;
+          }
+        }
+        &-text{
+          @include text($sans, 0, $azul_violeta, $regular);
+          margin-bottom: var(--fuente0);
+          @include mobile{
+            margin-bottom: var(--fuente0_mobile);
+          }
+        }
+      }
+      &-text{
+        @include text($sans, -1, $negro, $regular);
+        width: 100%;
+        padding: var(--fuente0) 0;
+        @include mobile{
+          padding: var(--fuente0_mobile) 0;
+        }
+      }
+    }
+    &-button{
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition-duration: .5s;
+      width: 25px;
+      top: 50%;
+      @include mobile{
+        width: 4vw;
+        top: 70%;
+      }
+      & img{
+        width: 100%;
+      }
+      &.left{
+        transform: rotate(180deg);
+        left: -45px;
+        @include mobile{
+          left: -1vw;
+        }
+        &:hover{
+          transform: scale(1.05) rotate(180deg);
+        }
+      }
+      &.right{
+        right: -45px;
+        @include mobile{
+          right: -1vw;
+        }
+        &:hover{
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  &-digits{
+    cursor: pointer;
+    margin-top: var(--fuente0);
+    padding-top: var(--fuente0);
+    position: relative;
+    @include mobile{
+      margin-top: var(--fuente0_mobile);
+      padding-top: var(--fuente0_mobile);
+    }
+    &:before{
+      @include text($sans, 0, $negro, $regular);
+      content: 'Click en la gráfica para interactuar';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      @include mobile{
+        font-size: var(--fuente-1_mobile);
+        content: 'Toca la gráfica para interactuar';
+      }
+    }
+    &.test{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      margin: calc(50vh - 290px) calc(50vw - 520px);
+      background-color: $azul_claro;
+      padding: 30px;
+      @include mobile{
+        padding: 0;
+        margin: calc(50vh - 82vw) 12.5vw;
+      }
+      &:before{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $azul_claro;
+      }
+      &:after{
+        @include text($sans, 0, $negro, $regular);
+        content: 'Click en la imagen para interactuar';
+        position: fixed;
+        right: calc(50vw - 520px);
+        top: calc(50vh - (290px + var(--fuente2)));
+        @include mobile{
+          content: 'Toca la imagen para interactuar';
+          top: calc(50vh - (82vw + var(--fuente2_mobile)));
+          right: 12.5vw;
+        }
+      }
+    }
+    &-title{
+      @include text($sans, 1, $negro, $regular);
+      text-transform: uppercase;
+      margin: var(--fuente1) 0;
+      position: relative;
+      @include mobile{
+        margin: var(--fuente1_mobile) 0 0;
+      }
+    }
+    &-text{
+      @include text($sans, -1);
+      margin: var(--fuente-2) 0;
+      position: relative;
+      @include mobile{
+        font-size: var(--fuente-2_mobile);
+        margin: var(--fuente-3_mobile) 0;
+      }
+      &:last-child{
+        margin-bottom: var(--fuente1_mobile);
+      }
+    }
+    &-info{
+      display: none;
+      &.visible{
+        display: block;
+        position: relative;
+      }
+      &-title{
+        @include text($sans, 1, var(--element_text_color), $bold);
+        text-align: center;
+        margin-bottom: var(--fuente-3);
+        @include mobile{
+          margin-bottom: var(--fuente-3_mobile);
+        }
+      }
+      &-subtitle{
+        @include text($sans, 0, $azul_violeta, $bold);
+        text-align: center;
+      }
+      &-siluetes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 980px;
+        margin-top: var(--fuente0);
+        @include mobile{
+          width: 75vw;
+          margin-top: var(--fuente0_mobile);
+        }
+        &-figure{
+          position: relative;
+          width: 120px;
+          margin: 0 10px;
+          padding-top: 100px;
+          @include mobile{
+            width: 23vw;
+            margin: 0 1vw;
+            padding-top: 16.5vw;
+            padding-bottom: 3vw;
+          }
+          &-image{
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+          }
+          &-text{
+            position: relative;
+            z-index: 5;
+            @include text($sans, 1, var(--element_text_color), $black);
+            text-align: center;
+          }
+          &-subtext{
+            @include text($sans, 0, $azul_violeta, $bold);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+          }
+          &-title{
+            @include text($sans, 0, $negro, $bold);
+            text-align: center;
+            margin-top: 5px;
+            @include mobile{
+              margin-top: 1vw;
+              font-size: var(--fuente-1_mobile);
+            }
+          }
+          &:not(.active){
+            opacity: .5;
+            padding-top: 144px;
+            @include mobile{
+              padding-top: 36vw;
+            }
+          }
+        }
+      }
+    }
+    &-graphic{
+      position: relative;
+      width: 980px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      display: none;
+      @include mobile{
+        width: 75vw;
+        flex-direction: column;
+      }
+      &.visible{
+        display: flex;
+      }
+      &-image{
+        width: 100%;
+        position: relative;
+        z-index: 5;
+      }
+      &-number{
+        position: absolute;
+        z-index: 2;
+        @include text($sans, ExtraBig, #7BA0D7, $black);
+        opacity: .4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        line-height: 1;
+        text-align: center;
+        @include mobile{
+          position: relative;
+        }
+      }
+      &-circles{
+        width: 470px;
+        height: 320px;
+        position: relative;
+        padding-top: 50px;
+        z-index: 5;
+        @include mobile{
+          padding-top: 5vw;
+          width: 75vw;
+          height: auto;
+          &:nth-of-type(2){
+            padding-bottom: 3vw;
+          }
+        }
+        &-title{
+          @include text($sans, 0, $negro, $black);
+          text-align: center;
+        }
+        &-content{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &.reverse{
+            flex-direction: row-reverse;
+            text-align: right;
+            @include mobile{
+              flex-direction: row;
+              text-align: left;
+            }
+          }
+          &-numbers{
+            width: 250px;
+            padding: 50px 0 40px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include mobile{
+              width: 45vw;
+              padding: 0;
+              height: auto;
+            }
+            &-element{
+              &:nth-of-type(1){
+                @include mobile{
+                  padding-bottom: 4vw;
+                }
+              }
+              &-bigtext{
+                @include text($sans, 2, var(--numberscolor), $black)
+              }
+              &-text{
+                @include text($sans, -1);
+                margin-top: var(--fuente-3);
+                @include mobile{
+                  margin-top: 1vw;
+                }
+              }
+            }
+          }
+          &-circle{
+            width: 220px;
+            padding: 50px 0 40px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include mobile{
+              width: 28vw;
+              padding: 0;
+              height: auto;
+            }
+            &-element{
+              width: calc(var(--circlesize) * 1.8px);
+              height: calc(var(--circlesize) * 1.8px);
+              border-radius: 50%;
+              background-color: var(--numberscolor);
+              @include mobile{
+                width: calc(var(--circlesize) * .28vw);
+                height: calc(var(--circlesize) * .28vw);
+              }
+            }
+          }
+        }
+      }
+    }
+    &-button{
+      display: flex;
+      background-color: transparent;
+      border: none;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 5;
+      transition-duration: .5s;
+      @include mobile{
+        margin: var(--fuente1_mobile) auto;
+      }
+      &:hover{
+        transform: scale(1.05);
+      }
+      & p{
+        @include text;
+        margin-left: var(--fuente-2);
+      }
+    }
+  }
+  &-map{
+    width: 980px;
+    height: 640px;
+    overflow: hidden;
+    background-color: var(--mapcolor);
+    cursor: pointer;
+    margin-top: var(--fuente0);
+    padding-top: var(--fuente0);
+    position: relative;
+    @include mobile{
+      padding-top: var(--fuente1_mobile);
+      margin-top: var(--fuente0_mobile);
+      width: 75vw;
+      height: 140vw;
+    }
+    &:before{
+      @include text($sans, 0, $blanco, $regular);
+      content: 'Click en la imagen para interactuar';
+      position: absolute;
+      right: var(--fuente-3);
+      top: var(--fuente-3);
+      z-index: 10;
+      @include mobile{
+        right: 2vw;
+        top: 2vw;
+        content: 'Toca la imagen para interactuar';
+        font-size: var(--fuente-1_mobile);
+      }
+    }
+    &.test{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      margin: calc(50vh - 320px) calc(50vw - 490px);
+      @include mobile{
+        margin: calc(50vh - 70vw) calc(50vw - 37.5vw);
+      }
+      &:before{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000ab;
+      }
+      &:after{
+        @include text($sans, 0, $blanco, $regular);
+        content: 'Click en la imagen para interactuar';
+        position: fixed;
+        right: calc(50vw - 490px);
+        top: calc(50vh - (320px + var(--fuente2)));
+        @include mobile{
+          content: 'Toca la imagen para interactuar';
+          top: calc(50vh - (70vw + var(--fuente2_mobile)));
+          right: calc(50vw - 37.5vw);
+        }
+      }
+    }
+    & img{
+      position: absolute;
+      z-index: 2;
+      transition-duration: 1s;
+    }
+    &-info{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: none;
+      background-color: var(--mapcolor);
+      &.visible{
+        display: block;
+      }
+      &-title{
+        @include text($sans, 2, $blanco, $black);
+        z-index: 5;
+        position: absolute;
+        top: 25px;
+        left: 35px;
+        @include mobile{
+          font-size: var(--fuente1_mobile);
+          top: 4vw;
+          left: 3vw;
+        }
+      }
+      &-info{
+        z-index: 5;
+        position: absolute;
+        top: 320px;
+        left: 110px;
+        width: 228px;
+        @include mobile{
+          top: auto;
+          bottom: 10vw;
+          left: 7.5vw;
+          width: 60vw;
+        }
+        &-bigtext{
+          @include text($sans, 3, $blanco, $black);
+          text-align: center;
+          margin-bottom: var(--fuente-2);
+          @include mobile{
+            margin-bottom: var(--fuente-3_mobile);
+          }
+        }
+        &-text{
+          @include text($sans, 0, $blanco, $regular);
+          text-align: center;
+        }
+      }
+    }
+    &.position1{
+      & img{
+        width: 107%;
+        top: 30px;
+        right: -180px;
+        @include mobile{
+          width: 110%;
+          top: 40vw;
+          right: -5%;
+        }
+      }
+    }
+    &.position2{
+      & img{
+        width: 170%;
+        top: -130px;
+        right: -340px;
+        @include mobile{
+          width: 300%;
+          top: 0;
+          right: -100%;
+        }
+      }
+    }
+    &.position3{
+      & img{
+        width: 220%;
+        top: -233px;
+        right: -542px;
+        @include mobile{
+          width: 500%;
+          top: -50vw;
+          right: -200%;
+        }
+      }
+    }
+  }
+}
+
+#GemaEspiroqueta{
+  &0{
+    left: -160px;
+    top: 50px; 
+    @include mobile{
+      display: none;
+    }
+  }
+  &2{
+    right: -200px;
+    top: 15px; 
+    @include mobile{
+      top: 213vw;
+      right: -27vw; 
+    }
+  }
+  &3{
+    left: -170px;
+    top: 200px; 
+    @include mobile{
+      left: auto;
+      top: auto;
+      right: -27vw;
+      bottom: 70vw;
+    }
+  }
+  &4{
+    right: -250px;
+    bottom: 150px; 
+    @include mobile{
+      right: auto;
+      bottom: auto;
+      top: 0;
+      left: -37vw;
+    }
+  }
+  &6{
+    left: 100px;
+    bottom: -80px; 
+    @include mobile{
+      left: -25vw;
+      bottom: -21vw;
+    }
+  }
+}
+#GemaSifilis-fullimage{
+  height: 100vh;
+  object-fit: cover;
+}

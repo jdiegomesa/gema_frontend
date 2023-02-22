@@ -1,0 +1,315 @@
+.GemaSlider{
+  width: 85vw;
+  margin-left: 15vw;
+  overflow-x: hidden;
+  position: relative;
+  &-container{
+    display: flex;
+    width: max-content;
+    transition-duration: 1s;
+    will-change: transform;
+  }
+  &-element{
+    width: 85vw;
+    height: 100vh;
+    position: relative;
+    &-image{
+      width: 85vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+      @include mobile{
+        // height: 186vw;
+      }
+    }
+    &-info{
+      position: absolute;
+      z-index: 10;
+      box-sizing: border-box;
+      padding: 40vh 15vw 0 35vw;
+      width: 85vw;
+      height: 100%;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      @include mobile{
+        justify-content: flex-end;
+        align-items: center;
+        padding: 65vh 10vw 0;
+      }
+      &-title{
+        color: #fff;
+        font-family: $sans;
+        font-weight: $bold;
+        font-size: var(--fuente4);
+        line-height: 1.1;
+        padding: 10px 0;
+        margin: 0;
+        @include tablet{
+          font-size: 2.7vw;
+          line-height: 2.9vw;
+          padding: 0.8vw 0;
+        }
+        @include mobile{
+          font-size: var(--fuente2_mobile);
+          padding: 3vw 0;
+        }
+      }
+      &-text{
+        color: rgb(253, 253, 253);
+        font-family: var(--texto);
+        font-weight: var(--regular);
+        font-size: 18px;
+        padding: 5px 0;
+        margin: 0;
+        @include tablet{
+          font-size: 1.4vw;
+          padding: .5vw 0;
+        }
+        @include mobile{
+          font-size: 4vw;
+          padding: 1vw 0;
+        }
+        &-actividades{
+          color: #000;
+          text-align: center;
+          padding:  0;
+        }
+      }
+      &-button{
+        background-color: $blanco;
+        font-weight: $regular;
+        color: $violeta_oscuro;
+        width: max-content;
+        text-transform: uppercase;
+        font-family: $sans;
+        font-weight: $bold;
+        transition-duration: .5s;
+        border-radius: 50vw;
+        padding: var(--fuente-1) var(--fuente1);
+        font-size: var(--fuente0);
+        &:hover{
+          transform: scale(1.05);
+        }
+        @include mobile{
+          padding: var(--fuente-2_mobile) var(--fuente0_mobile);
+          font-size: var(--fuente-1_mobile);
+        }
+      }
+      &-actividades{
+        position: relative;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 550px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient( to right, var(--azulclaro) 10%, transparent 70%);
+        @include mobile{
+          justify-content: flex-end;
+          padding: 2.5vw;
+          width: 90vw;
+          background: linear-gradient( to top, var(--azulclaro) 10%, transparent 70%);
+        }
+      }
+    }
+    &-actividades{
+      width: 600px;
+      @include tablet{
+        width: 43vw;
+      }
+      @include mobile{
+        width: 90vw;
+      }
+    }
+  }
+  &-button{
+    cursor: pointer;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: calc(50vh - 20px);
+    @include mobile{
+      width: 6vw;
+    }
+    & img{
+      width: 100%;
+    }
+    & .pause{
+      display: none;
+    }
+    &:first-of-type{
+      transform: rotate(90deg);
+      left: 2.5%;
+    }
+    &:last-of-type{
+      transform: rotate(-90deg);
+      right: 2.5%;
+    }
+  }
+  &-dots{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: absolute;
+    bottom: 4vh;
+    width: 50%;
+    left: 25%;
+    @include mobile{
+      margin: 0 auto;
+    }
+    &-element{
+      cursor: pointer;
+      border: solid 2px $blanco;
+      border-radius: 50%;
+      margin: 0 10px;
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      padding: 0;
+      &.active{
+        background-color: $blanco;
+      }
+      @include mobile{
+        width: 3vw;
+        height: 3vw;
+        margin: 0 2vw;
+        border-width: .7vw;
+      }
+    }
+  }
+}
+.UBPDSliderMini{
+  width: 620px;
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: var(--fuente1);
+  @include tablet{
+    padding-bottom: var(--fuente1_tablet);
+    width: 40vw;
+  }
+  @include mobile{
+    padding-bottom: var(--fuente1_mobile);
+    width: 90vw;
+  }
+  &-container{
+    display: flex;
+    width: max-content;
+    transition-duration: 1s;
+    will-change: transform;
+  }
+  &-element{
+    width: 620px;
+    position: relative;
+    @include tablet{
+      width: 44.28vw;
+    }
+    @include mobile{
+      width: 90vw;
+    }
+    &-image{
+      width: 620px;
+      height: 290.62px;
+      object-fit: cover;
+      display: block;
+      @include tablet{
+        width: 44.28vw;
+        height: 20.75vw;
+      }
+      @include mobile{
+        width: 90vw;
+        height: 42.18vw;
+      }
+    }
+    &-info{
+      z-index: 10;
+      box-sizing: border-box;
+      padding: var(--fuente0) 0;
+      width: 100%;
+      min-height: calc(var(--fuente0) * 3);
+      color: var(--color_texto);
+      font-family: var(--texto);
+      font-weight: var(--regular);
+      font-size: var(--fuente0);
+      @include tablet{
+        font-size: var(--fuente0_tablet);
+        min-height: calc(var(--fuente0_tablet) * 3);
+      }
+      @include mobile{
+        font-size: var(--fuente0_mobile);
+        min-height: calc(var(--fuente0_mobile) * 3);
+      }
+    }
+  }
+  &-buttons{
+    position: relative;
+    padding: 10px 0 0;
+    margin: 0 auto;
+    max-width: 1280px;
+    @include mobile{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &-controls{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: fit-content;
+      &-button{
+        cursor: pointer;
+        width: 30px;
+        border: none;
+        background-color: transparent;
+        @include mobile{
+          width: 6vw;
+        }
+        & img{
+          width: 100%;
+        }
+        & .pause{
+          display: none;
+        }
+      }
+    }
+    &-dots{
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0 16px;
+      @include mobile{
+        margin: 0 auto;
+      }
+      &-element{
+        cursor: pointer;
+        border: solid 2px var(--aguamarina);
+        border-radius: 50%;
+        margin: 0 10px;
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        padding: 0;
+        &.active{
+          background-color: var(--aguamarina);
+        }
+        @include mobile{
+          width: 4vw;
+          height: 4vw;
+          margin: 0 2vw;
+          border-width: .7vw;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,213 @@
+.GemaQuienes{
+  width: 550px;
+  min-height: 100vh;
+  padding-right: calc(78vw - 550px);
+  padding-left: 7vw;
+  margin-left: 15vw;
+  overflow-x: hidden;
+  position: relative;
+  background-color: $gris_oscuro;
+  @include mobile{
+    width: 77vw;
+    margin-left: 15vw;
+    padding: 0 4vw;
+  }
+  &-text{
+    @include text($sans, 0, $blanco, $light);
+    padding-top: 30px;
+  }
+  &-elements{
+    padding: var(--fuente1) 0 var(--fuente3);
+    @include mobile{
+      padding: var(--fuente1_mobile) 0 var(--fuente3_mobile);
+    }
+    &-item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 400px;
+      margin-top: var(--fuente0);
+      margin-bottom: var(--fuente0);
+      cursor: pointer;
+      transition-duration: .5s;
+      @include mobile{
+        width: 75vw;
+        margin: var(--fuente0_mobile) auto;
+      }
+      &:hover{
+        transform: scale(1.05);
+      }
+      &-image{
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        background-color: $gris;
+        border-radius: 50vw;
+        @include mobile{
+          width: 23vw;
+          height: 23vw;
+        }
+      }
+      &-content{
+        width: 270px;
+        @include mobile{
+          width: 50vw;
+        }
+        &-title{
+          @include text($sans, 0, $blanco, $bold);
+          margin-bottom: 6px;
+          @include mobile{
+            font-size: 3.5vw;
+          }
+        }
+        &-text{
+          @include text($sans, -1, $blanco, $light);
+        }
+      }
+      &:nth-of-type(odd){
+        margin-right: auto
+      }
+      &:nth-of-type(even){
+        margin-left: auto
+      }
+    }
+  }
+  &-quote{
+    @include text($serif, 2, $blanco, $regular);
+    font-style: italic;
+    position: fixed;
+    right: calc(39vw - 421px);
+    top: calc(50vh - 150px);
+    width: 285px;
+    max-width: 35vw;
+    @include mobile{
+      position: static;
+      width: 100%;
+      font-size: var(--fuente1_mobile);
+      padding-bottom: 7vw;
+    }
+  }
+  &-linetitle{
+    @include text($sans, 1, $blanco, $regular);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    &::after{
+      content: '';
+      background-color: $blanco;
+      width: 90%;
+      height: 2px;
+      margin-left: var(--fuente-2);
+      @include mobile{
+        height: .1vw;
+        margin-left: var(--fuente-2_mobile);
+      }
+    }
+    @include mobile{
+      font-size: var(--fuente0_mobile);
+    }
+  }
+  &-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .5);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    cursor: pointer;
+    display: none;
+    &.opened{
+      display: flex;
+    }
+    &-container{
+      width: 800px;
+      background-color: rgba(0,0,0,.9);
+      border-radius: var(--fuente0);
+      padding: var(--fuente4) 60px;
+      cursor: auto;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      @include mobile{
+        padding: 5vw;
+        max-height: 85vh;
+        overflow-y: auto;
+        width: 60vw;
+        margin-left: 15vw;
+        flex-direction: column;
+        padding-bottom: 15vw;
+      }
+    }
+    &-image{
+      width: 270px;
+      @include mobile{
+        width: 35vw;
+        margin-bottom: 5vw;
+      }
+    }
+    &-info{
+      width: 500px;
+      @include mobile{
+        width: 60vw;
+      }
+      &-name{
+        @include text($sans, 2, $blanco, $regular);
+        @include mobile{
+          font-size: var(--fuente0_mobile)
+        }
+      }
+      &-position{
+        @include text($sans, 1, $blanco, $light);
+        @include mobile{
+          font-size: var(--fuente-1_mobile);
+          margin-top: 1vw;
+        }
+      }
+      &-text{
+        @include text($serif, -1, $blanco, $regular);
+        margin-top: var(--fuente1);
+        max-height: 170px;
+        @include mobile{
+          margin-top: var(--fuente-1_mobile);
+          max-height: 60vw;
+        }
+      }
+    }
+    &-social{
+      width: 50px;
+      position: absolute;
+      right: 0;
+      @include mobile{
+        right: 15vw;
+        bottom: 2.5vw;
+        display: flex;
+        justify-content: center;
+        width: 40vw;
+      }
+      &-icon{
+        display: block;
+        cursor: pointer;
+        transition-duration: .5s;
+        width: 30px;
+        margin-bottom: var(--fuente-3);
+        @include mobile{
+          margin: 0 1.5vw;
+          width: 6vw;
+        }
+        &:hover{
+          transform: scale(1.05);
+        }
+        & img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+button.GemaSidemenu-button(onclick="Gemaopen('gemasidemenu');")
+  img(src="https://gema.media/wp-content/themes/gema-media/assets/menu_grey_icon.svg")
+nav.GemaSidemenu#gemasidemenu(onclick="validateTarget(Gemaopen, 'gemasidemenu');")
+  .GemaSidemenu-container
+    a.GemaSidemenu-logo(href="https://gema.media")
+      img(src="https://gema.media/wp-content/uploads/2022/08/logo_gema_color.png", alt="Logo Gema")
+    a(href="../").GemaSidemenu-text Inicio
+    ul.GemaSidemenu-menu 
+      li.GemaSidemenu-menu-element.active
+        a(href="./nota_infografias.html")
+          img.GemaSidemenu-menu-element-image(src="https://gema.media/wp-content/uploads/2022/08/migrantesderechos_reportaje_icon.svg")
+          p.GemaSidemenu-menu-element-subtitle Reportaje
+          h3.GemaSidemenu-menu-element-title Así es migrar y vivir con VIH en Colombia
+      li.GemaSidemenu-menu-element
+        a(href="./nota_abierta.html")
+          img.GemaSidemenu-menu-element-image(src="https://gema.media/wp-content/uploads/2022/08/migrantesderechos_base_icon.svg")
+          p.GemaSidemenu-menu-element-subtitle Base de datos
+          h3.GemaSidemenu-menu-element-title Servicios de salud sexual y reproductiva en Colombia
+      li.GemaSidemenu-menu-element
+        a(href="./nota_abierta2.html")
+          img.GemaSidemenu-menu-element-image(src="https://gema.media/wp-content/uploads/2022/08/migrantesderechos_infografia_icon.svg")
+          p.GemaSidemenu-menu-element-subtitle Infografía
+          h3.GemaSidemenu-menu-element-title Lo que cuentan los datos
+    a(href="#" onclick="Gemaopen('creditsmodal');").GemaSidemenu-text Créditos

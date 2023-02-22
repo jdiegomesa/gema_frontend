@@ -1,0 +1,29 @@
+-var title = 'Mapa'
+-var titulo = 'Lo que cuentan los datos'
+-var subtitulo = 'En Colombia se prestan servicios de salud sexual y reproductiva, pero estos se concentran en los principales departamentos y capitales. Las desigualdades se agudizan según la oferta pública y privada o las necesidades de las minorías.'
+-var type = 'Infografía'
+- var headerimage = "url('../img/fondo3.svg')"
+
+
+doctype html
+html
+  include ./components/_head.pug
+  body.greybackground
+    //- Menú sidebar
+    include ./components/_sidemenu.pug
+    main.GemaInfonote(style="--note_color: #801AAF;")
+      //- Header de nota
+      include ./components/_noteheader.pug
+      include ./components/_map.pug
+    //- Menú compartir
+    include ./components/_socialmenu.pug
+    include ./components/_creditsmodal.pug
+    a.GemaInfonote-fixedbutton.small(href="#" onclick="Gemaopen('disclamermodal');")
+      img(src="https://gema.media/wp-content/themes/gema-media/assets/alert_yellow_icon.svg")
+    .GemaInfonote-modal#disclamermodal(onclick="validateTarget(Gemaopen, 'disclamermodal');")
+      .GemaInfonote-modal-container 
+        p.GemaInfonote-modal-text La Dirección de Prestación de Servicios y Atención Primaria es la dependencia del Ministerio de Salud que establece las IPS habilitadas para prestar servicios de sexualidad, derechos sexuales y derechos reproductivos en Colombia. El instrumento que brinda para consultarlas es el Registro Especial de Prestadores de Servicios de Salud (REPS).
+        p.GemaInfonote-modal-text De acuerdo con las Guías de Práctica Clínica para la prevención, detección temprana y tratamiento del embarazo, parto o puerperio de 2013 del Ministerio de Salud, los médicos especialistas en obstetricia y ginecología están capacitados para brindar “cuidados a mujeres en la prevención, detección temprana y atención de las alteraciones del embarazo, parto o puerperio, en los diferentes niveles de atención en salud”. Por esto se incluyen los registros del REPS de ambos tipos de servicios en la base de datos del bot.  
+    script(src="https://gema.media/wp-content/themes/gema-media/js/gema.js") 
+    script(src="https://gema.media/wp-content/especiales/migrantes_salud_sexual/modules.js") 
+    script(src="https://gema.media/wp-content/especiales/migrantes_salud_sexual/gema_migrantes_map.js") 

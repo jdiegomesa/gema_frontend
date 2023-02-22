@@ -1,0 +1,7059 @@
+@charset "UTF-8";
+/* Desarrollado por Juan Diego Mesa O. para la Gema Media
+juand.mesa@outlook.com
+juandiegomesa.com */
+:root {
+  /* Fuentes Desktop*/
+  --fuente7: 76px;
+  --fuente6: 61px;
+  --fuente5: 49px;
+  --fuente4: 39px;
+  --fuente3: 31px;
+  --fuente2: 25px;
+  --fuente1: 20px;
+  --fuente0: 16px;
+  --fuente-1: 13px;
+  --fuente-2: 10px;
+  --fuente-3: 8px;
+  /* Fuentes Tablet*/
+  --fuente7_tablet: 5.4vw;
+  --fuente6_tablet: 4.35vw;
+  --fuente5_tablet: 3.5vw;
+  --fuente4_tablet: 2.7vw;
+  --fuente3_tablet: 2.2vw;
+  --fuente2_tablet: 1.71vw;
+  --fuente1_tablet: 1.42vw;
+  --fuente0_tablet: 1.2vw;
+  --fuente-1_tablet: 0.93vw;
+  --fuente-2_tablet: 0.71vw;
+  --fuente-3_tablet: 0.57vw;
+  /* Fuentes Mobile*/
+  --fuente7_mobile: 19vw;
+  --fuente6_mobile: 15.25vw;
+  --fuente5_mobile: 12.25vw;
+  --fuente4_mobile: 8.5vw;
+  --fuente3_mobile: 7.8vw;
+  --fuente2_mobile: 6.25vw;
+  --fuente1_mobile: 5vw;
+  --fuente0_mobile: 4vw;
+  --fuente-1_mobile: 3.25vw;
+  --fuente-2_mobile: 2.5vw;
+  --fuente-3_mobile: 2vw;
+  --fuenteExtraBig: 400px;
+  --fuenteExtraBig_mobile: 30vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1;
+}
+*:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.greybackground {
+  background-color: #F0F0F0;
+  background-image: url(./assets/grey_wave.svg);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.darkbackground {
+  background-color: #CECECE;
+  background-image: url(./assets/white_wave.svg);
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.softbluebackground {
+  background-color: #AEC1DD;
+}
+
+.GemaSlider {
+  width: 85vw;
+  margin-left: 15vw;
+  overflow-x: hidden;
+  position: relative;
+}
+.GemaSlider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  will-change: transform;
+}
+.GemaSlider-element {
+  width: 85vw;
+  height: 100vh;
+  position: relative;
+}
+.GemaSlider-element-image {
+  width: 85vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.GemaSlider-element-info {
+  position: absolute;
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40vh 15vw 0 35vw;
+  width: 85vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-element-info {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 65vh 10vw 0;
+  }
+}
+.GemaSlider-element-info-title {
+  color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente4);
+  line-height: 1.1;
+  padding: 10px 0;
+  margin: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSlider-element-info-title {
+    font-size: 2.7vw;
+    line-height: 2.9vw;
+    padding: 0.8vw 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-element-info-title {
+    font-size: var(--fuente2_mobile);
+    padding: 3vw 0;
+  }
+}
+.GemaSlider-element-info-text {
+  color: rgb(253, 253, 253);
+  font-family: var(--texto);
+  font-weight: var(--regular);
+  font-size: 18px;
+  padding: 5px 0;
+  margin: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSlider-element-info-text {
+    font-size: 1.4vw;
+    padding: 0.5vw 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-element-info-text {
+    font-size: 4vw;
+    padding: 1vw 0;
+  }
+}
+.GemaSlider-element-info-text-actividades {
+  color: #000;
+  text-align: center;
+  padding: 0;
+}
+.GemaSlider-element-info-button {
+  background-color: #fff;
+  font-weight: 400;
+  color: #64008C;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  border-radius: 50vw;
+  padding: var(--fuente-1) var(--fuente1);
+  font-size: var(--fuente0);
+}
+.GemaSlider-element-info-button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-element-info-button {
+    padding: var(--fuente-2_mobile) var(--fuente0_mobile);
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSlider-element-info-actividades {
+  position: relative;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  width: 550px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, var(--azulclaro)), color-stop(70%, transparent));
+  background: linear-gradient(to right, var(--azulclaro) 10%, transparent 70%);
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-element-info-actividades {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 2.5vw;
+    width: 90vw;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, var(--azulclaro)), color-stop(70%, transparent));
+    background: linear-gradient(to top, var(--azulclaro) 10%, transparent 70%);
+  }
+}
+.GemaSlider-element-actividades {
+  width: 600px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSlider-element-actividades {
+    width: 43vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-element-actividades {
+    width: 90vw;
+  }
+}
+.GemaSlider-button {
+  cursor: pointer;
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50vh - 20px);
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-button {
+    width: 6vw;
+  }
+}
+.GemaSlider-button img {
+  width: 100%;
+}
+.GemaSlider-button .pause {
+  display: none;
+}
+.GemaSlider-button:first-of-type {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: 2.5%;
+}
+.GemaSlider-button:last-of-type {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  right: 2.5%;
+}
+.GemaSlider-dots {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 4vh;
+  width: 50%;
+  left: 25%;
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-dots {
+    margin: 0 auto;
+  }
+}
+.GemaSlider-dots-element {
+  cursor: pointer;
+  border: solid 2px #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  padding: 0;
+}
+.GemaSlider-dots-element.active {
+  background-color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .GemaSlider-dots-element {
+    width: 3vw;
+    height: 3vw;
+    margin: 0 2vw;
+    border-width: 0.7vw;
+  }
+}
+
+.UBPDSliderMini {
+  width: 620px;
+  overflow-x: hidden;
+  position: relative;
+  padding-bottom: var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .UBPDSliderMini {
+    padding-bottom: var(--fuente1_tablet);
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini {
+    padding-bottom: var(--fuente1_mobile);
+    width: 90vw;
+  }
+}
+.UBPDSliderMini-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  will-change: transform;
+}
+.UBPDSliderMini-element {
+  width: 620px;
+  position: relative;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .UBPDSliderMini-element {
+    width: 44.28vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-element {
+    width: 90vw;
+  }
+}
+.UBPDSliderMini-element-image {
+  width: 620px;
+  height: 290.62px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .UBPDSliderMini-element-image {
+    width: 44.28vw;
+    height: 20.75vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-element-image {
+    width: 90vw;
+    height: 42.18vw;
+  }
+}
+.UBPDSliderMini-element-info {
+  z-index: 10;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: var(--fuente0) 0;
+  width: 100%;
+  min-height: calc(var(--fuente0) * 3);
+  color: var(--color_texto);
+  font-family: var(--texto);
+  font-weight: var(--regular);
+  font-size: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .UBPDSliderMini-element-info {
+    font-size: var(--fuente0_tablet);
+    min-height: calc(var(--fuente0_tablet) * 3);
+  }
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-element-info {
+    font-size: var(--fuente0_mobile);
+    min-height: calc(var(--fuente0_mobile) * 3);
+  }
+}
+.UBPDSliderMini-buttons {
+  position: relative;
+  padding: 10px 0 0;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+.UBPDSliderMini-buttons-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.UBPDSliderMini-buttons-controls-button {
+  cursor: pointer;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-buttons-controls-button {
+    width: 6vw;
+  }
+}
+.UBPDSliderMini-buttons-controls-button img {
+  width: 100%;
+}
+.UBPDSliderMini-buttons-controls-button .pause {
+  display: none;
+}
+.UBPDSliderMini-buttons-dots {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-buttons-dots {
+    margin: 0 auto;
+  }
+}
+.UBPDSliderMini-buttons-dots-element {
+  cursor: pointer;
+  border: solid 2px var(--aguamarina);
+  border-radius: 50%;
+  margin: 0 10px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  padding: 0;
+}
+.UBPDSliderMini-buttons-dots-element.active {
+  background-color: var(--aguamarina);
+}
+@media screen and (max-width: 600px) {
+  .UBPDSliderMini-buttons-dots-element {
+    width: 4vw;
+    height: 4vw;
+    margin: 0 2vw;
+    border-width: 0.7vw;
+  }
+}
+
+.GemaSocialmenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10vh;
+}
+@media screen and (max-width: 600px) {
+  .GemaSocialmenu {
+    right: initial;
+    left: 3vw;
+    padding-bottom: 0;
+  }
+}
+.GemaSocialmenu-item {
+  cursor: pointer;
+  margin: 4px 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+@media screen and (max-width: 600px) {
+  .GemaSocialmenu-item {
+    margin: 1vw 0;
+  }
+}
+.GemaSocialmenu-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.GemaSocialmenu-item-icon {
+  width: 30px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSocialmenu-item-icon {
+    width: 6vw;
+  }
+}
+
+.GemaMainmenu {
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  vertical-align: top;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+.GemaMainmenu-container {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  padding: 5vh 2.5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+.GemaMainmenu-mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu-mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.GemaMainmenu-icon {
+  width: 80%;
+}
+.GemaMainmenu-hamb {
+  background-color: transparent;
+  border: none;
+  margin-top: 2vh;
+}
+.GemaMainmenu-logo {
+  width: 10vw;
+  margin: 0 auto;
+}
+.GemaMainmenu-logo img {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu-logo {
+    display: none;
+    width: 35vw;
+  }
+}
+.GemaMainmenu-footer {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu-footer {
+    width: 35vw;
+    margin: 0 auto;
+  }
+}
+.GemaMainmenu-footer-who {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 2vh;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMainmenu-footer-who {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu-footer-who {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaMainmenu-footer-who a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMainmenu-footer-who a:hover {
+  opacity: 0.8;
+}
+.GemaMainmenu-footer-who a:visited {
+  text-decoration: none;
+}
+.GemaMainmenu-footer-who:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu-footer-who {
+    font-size: var(--fuente-1_mobile);
+    text-decoration: underline;
+    text-underline-offset: 1vw;
+  }
+}
+.GemaMainmenu-footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.GemaMainmenu-footer-social-element {
+  cursor: pointer;
+  -webkit-transition-duration: 0.5;
+          transition-duration: 0.5;
+  width: 2vw;
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu-footer-social-element {
+    width: 6vw;
+    margin-top: 2vw;
+  }
+}
+.GemaMainmenu-footer-social-element:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.GemaMainmenu-footer-social-element img {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .GemaMainmenu:not(.opened) .GemaMainmenu-items {
+    display: none;
+  }
+  .GemaMainmenu:not(.opened) .GemaMainmenu-footer {
+    display: none;
+  }
+  .GemaMainmenu:not(.opened) .GemaMainmenu-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .GemaMainmenu.opened {
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.4666666667);
+  }
+  .GemaMainmenu.opened .GemaMainmenu-container {
+    width: 45vw;
+  }
+  .GemaMainmenu.opened .GemaMainmenu-logo {
+    display: block;
+  }
+}
+
+.GemaBigbackground-image {
+  position: absolute;
+  width: 100vw;
+  z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-image {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
+  }
+}
+.GemaBigbackground-header {
+  position: relative;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 84px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header {
+    padding-top: 6vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header {
+    padding-top: 0;
+    height: auto;
+  }
+}
+.GemaBigbackground-header-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 900;
+  font-size: var(--fuente7);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  line-height: 1;
+  font-style: italic;
+  text-align: center;
+  width: 770px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header-title {
+    max-width: 90vw;
+    font-size: var(--fuente7_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-title {
+    max-width: 90vw;
+    font-size: var(--fuente7_mobile);
+  }
+}
+.GemaBigbackground-header-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-header-title a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-header-title a:visited {
+  text-decoration: none;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header-title {
+    width: 55vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-title {
+    width: 90vw;
+    font-size: var(--fuente5_mobile);
+    padding-top: calc(50vh - 20vw);
+  }
+}
+.GemaBigbackground-header-subtitle {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 3px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaBigbackground-header-subtitle a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-header-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-header-subtitle a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-subtitle {
+    font-size: var(--fuente1_mobile);
+    padding-bottom: calc(50vh - 20vw);
+    letter-spacing: 0.3vw;
+  }
+}
+.GemaBigbackground-header-text {
+  margin: 0 auto;
+  padding: var(--fuente3) 0;
+  text-align: center;
+  width: 770px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header-text {
+    padding: var(--fuente3_tablet) 0;
+    width: 55vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-text {
+    padding: var(--fuente0_mobile) 0;
+    width: 90vw;
+  }
+}
+.GemaBigbackground-header-text p {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: var(--fuente1);
+  margin-bottom: var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header-text p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-text p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaBigbackground-header-text p a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-header-text p a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-header-text p a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-text p {
+    margin-top: var(--fuente0_mobile);
+    margin-bottom: var(--fuente0_mobile);
+  }
+}
+.GemaBigbackground-header-arrow {
+  width: 42px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-header-arrow {
+    width: 3vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-header-arrow {
+    display: none;
+  }
+}
+.GemaBigbackground-circlemenu {
+  position: relative;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 900px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu-container {
+    position: relative;
+    width: 80vw;
+    overflow: hidden;
+    margin: 5vw auto 15vw;
+  }
+}
+.GemaBigbackground-circlemenu-container-button {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu-container-button {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+    top: calc(50% - 10vw);
+  }
+}
+.GemaBigbackground-circlemenu-container-button img {
+  width: 6vw;
+}
+.GemaBigbackground-circlemenu-container-button.left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: 0;
+}
+.GemaBigbackground-circlemenu-container-button.right {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  right: 0;
+}
+.GemaBigbackground-circlemenu-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  width: 200px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu-element {
+    width: 80vw;
+  }
+}
+.GemaBigbackground-circlemenu-element:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.GemaBigbackground-circlemenu-element-image {
+  width: 200px;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu-element-image {
+    display: block;
+    margin: 0 auto;
+    width: 60vw;
+  }
+}
+.GemaBigbackground-circlemenu-element-subtitle {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-top: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-circlemenu-element-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu-element-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaBigbackground-circlemenu-element-subtitle a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-circlemenu-element-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-circlemenu-element-subtitle a:visited {
+  text-decoration: none;
+}
+.GemaBigbackground-circlemenu-element-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin-top: var(--fuente-4);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-circlemenu-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-circlemenu-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaBigbackground-circlemenu-element-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-circlemenu-element-title a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-circlemenu-element-title a:visited {
+  text-decoration: none;
+}
+.GemaBigbackground-footer {
+  position: relative;
+  z-index: 5;
+  width: 1080px;
+  margin: 48px auto 0;
+  border-top: solid #fff 1px;
+  padding-top: var(--fuente4);
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 0 30vw;
+    border-width: 0.3vw;
+  }
+}
+.GemaBigbackground-footer-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: var(--fuente4);
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-elements {
+    padding: var(--fuente4_mobile) 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.GemaBigbackground-footer-elements-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  max-width: 33%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-elements-item {
+    max-width: 29vw;
+  }
+}
+.GemaBigbackground-footer-elements-item-text {
+  width: 100%;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: var(--fuente1);
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-footer-elements-item-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-elements-item-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaBigbackground-footer-elements-item-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-footer-elements-item-text a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-footer-elements-item-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-elements-item-text {
+    margin-bottom: var(--fuente1_mobile);
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaBigbackground-footer-elements-item-image {
+  height: 70px;
+  max-width: 190px;
+  margin: 0 var(--fuente-3);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-elements-item-image {
+    width: 20vw;
+    max-height: 10vw;
+  }
+}
+.GemaBigbackground-footer-text {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente-2);
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaBigbackground-footer-text {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-text {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaBigbackground-footer-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaBigbackground-footer-text a:hover {
+  opacity: 0.8;
+}
+.GemaBigbackground-footer-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaBigbackground-footer-text {
+    padding-bottom: var(--fuente-1_mobile);
+  }
+}
+
+.GemaSidemenu {
+  left: calc(50vw - 640px);
+  top: 0;
+  z-index: 10;
+  position: fixed;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    overflow: hidden;
+    max-width: 0;
+    left: 0;
+    z-index: 20;
+  }
+}
+.GemaSidemenu.opened {
+  right: 0;
+  max-width: 100vw;
+}
+.GemaSidemenu-button {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-button {
+    position: fixed;
+    display: block;
+    border: none;
+    background-color: transparent;
+    z-index: 15;
+    top: 5vh;
+    left: 4vw;
+  }
+  .GemaSidemenu-button img {
+    width: 6vw;
+  }
+}
+.GemaSidemenu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  height: 100vh;
+  width: 250px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-container {
+    background-color: #fff;
+    border-bottom-right-radius: 20vw;
+    border-top-right-radius: 20vw;
+    width: 35vw;
+  }
+}
+.GemaSidemenu-logo {
+  margin: 14px auto 8px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-logo {
+    margin: 6vw auto 3vw;
+  }
+}
+.GemaSidemenu-logo img {
+  width: 120px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-logo img {
+    width: 20vw;
+  }
+}
+.GemaSidemenu-text {
+  color: #656565;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin: var(--fuente-3) auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSidemenu-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSidemenu-text a {
+  color: #656565;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSidemenu-text a:hover {
+  opacity: 0.8;
+}
+.GemaSidemenu-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-text {
+    margin: var(--fuente-3_mobile) auto;
+  }
+}
+.GemaSidemenu-text:hover {
+  text-decoration: underline;
+}
+.GemaSidemenu-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+.GemaSidemenu-menu-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  width: 200px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element {
+    width: 27vw;
+  }
+}
+.GemaSidemenu-menu-element-image {
+  border-radius: 50%;
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element-image {
+    width: 15vw;
+  }
+}
+.GemaSidemenu-menu-element-subtitle {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: var(--fuente-4);
+  width: 150px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSidemenu-menu-element-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaSidemenu-menu-element-subtitle a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSidemenu-menu-element-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaSidemenu-menu-element-subtitle a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element-subtitle {
+    width: 25vw;
+  }
+}
+.GemaSidemenu-menu-element-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: var(--fuente-4);
+  width: 120px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSidemenu-menu-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaSidemenu-menu-element-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSidemenu-menu-element-title a:hover {
+  opacity: 0.8;
+}
+.GemaSidemenu-menu-element-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element-title {
+    width: 25vw;
+  }
+}
+.GemaSidemenu-menu-element.active .GemaSidemenu-menu-element-image {
+  border: solid 3px #801AAF;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element.active .GemaSidemenu-menu-element-image {
+    border-width: 0.8vw;
+  }
+}
+.GemaSidemenu-menu-element:not(.active) {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.GemaSidemenu-menu-element:not(.active):hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 1;
+}
+.GemaSidemenu-menu-element:after {
+  content: "";
+  width: 1px;
+  height: 20px;
+  display: block;
+  background-color: #656565;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element:after {
+    width: 0.3vw;
+    height: 3vw;
+  }
+}
+.GemaSidemenu-menu-element:first-child:before {
+  content: "";
+  background: transparent url(./assets/menu_grey_line.svg) center center no-repeat;
+  background-size: contain;
+  width: 10px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element:first-child:before {
+    width: 2vw;
+    height: 5vw;
+  }
+}
+.GemaSidemenu-menu-element:last-child:after {
+  background: transparent url(./assets/menu_grey_line.svg) center center no-repeat;
+  background-size: contain;
+  width: 10px;
+  height: 20px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaSidemenu-menu-element:last-child:after {
+    width: 2vw;
+    height: 5vw;
+  }
+}
+
+.GemaInfonote {
+  width: 980px;
+  margin-left: calc(50vw - 390px);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote {
+    width: 75vw;
+    margin-left: 15vw;
+  }
+}
+.GemaInfonote-header {
+  padding: 28px 0 14px;
+  border-bottom: solid var(--note_color) 3px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header {
+    background: transparent var(--header_image) center no-repeat;
+    background-size: 80%;
+    padding: 35vh 0 5vw;
+    border-bottom: none;
+    margin-bottom: 0;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+}
+.GemaInfonote-header-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-header-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-header-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-header-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-header-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header.outstanding {
+    margin-bottom: 50vh;
+  }
+}
+.GemaInfonote-header-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 0 28px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header-head {
+    padding: 3vw 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.GemaInfonote-header-head-title {
+  color: var(--note_color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 900;
+  font-size: var(--fuente5);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  line-height: 1;
+  font-style: italic;
+  margin: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 550px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-header-head-title {
+    max-width: 90vw;
+    font-size: var(--fuente5_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header-head-title {
+    max-width: 90vw;
+    font-size: var(--fuente5_mobile);
+  }
+}
+.GemaInfonote-header-head-title a {
+  color: var(--note_color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-header-head-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-header-head-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header-head-title {
+    font-size: var(--fuente4_mobile);
+    width: 75vw;
+    padding-bottom: 4vw;
+  }
+}
+.GemaInfonote-header-head-subtitle {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+  margin: 0;
+  width: 400px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-header-head-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header-head-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-header-head-subtitle a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-header-head-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-header-head-subtitle a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-header-head-subtitle {
+    width: 75vw;
+    border-bottom: solid var(--note_color) 0.8vw;
+    padding-bottom: 5vw;
+  }
+}
+.GemaInfonote-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: var(--fuente4) 0 200px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content {
+    padding: var(--fuente4_mobile) 0 15vh;
+  }
+}
+.GemaInfonote-content-text {
+  width: 620px;
+  position: relative;
+}
+.GemaInfonote-content-text > p {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: var(--fuente1);
+  line-height: 1.4;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-text > p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-text > p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-text > p a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-text > p a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-text > p a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-text {
+    width: 100%;
+  }
+}
+.GemaInfonote-content-sidebar-element {
+  position: fixed;
+  width: 260px;
+  right: calc(50vw - 590px);
+  top: 50px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element {
+    padding: var(--fuente0) 0;
+    position: static;
+    max-height: none;
+    opacity: 1;
+    width: 70vw;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.GemaInfonote-content-sidebar-element.showed {
+  max-height: 100vh;
+  opacity: 1;
+}
+.GemaInfonote-content-sidebar-element-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.GemaInfonote-content-sidebar-element::after {
+  content: "";
+  padding-top: var(--fuente0);
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  height: 0;
+  border-bottom: solid #FFDC00 5px;
+}
+.GemaInfonote-content-sidebar-element img {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.GemaInfonote-content-sidebar-element-title {
+  color: #FFDC00;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente6);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin: var(--fuente-2) auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-sidebar-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente6_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente6_mobile);
+  }
+}
+.GemaInfonote-content-sidebar-element-title a {
+  color: #FFDC00;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-sidebar-element-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-sidebar-element-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-title {
+    font-size: var(--fuente6_mobile);
+    margin: var(--fuente-2_mobile) auto;
+  }
+}
+.GemaInfonote-content-sidebar-element-subtitle {
+  color: #801AAF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  margin: var(--fuente-2) auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-sidebar-element-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaInfonote-content-sidebar-element-subtitle a {
+  color: #801AAF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-sidebar-element-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-sidebar-element-subtitle a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-subtitle {
+    margin: var(--fuente-2_mobile) auto;
+  }
+}
+.GemaInfonote-content-sidebar-element-text {
+  color: #801AAF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin: var(--fuente-2) auto;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-sidebar-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-content-sidebar-element-text a {
+  color: #801AAF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-sidebar-element-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-sidebar-element-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-text {
+    margin: var(--fuente-2_mobile) auto;
+    font-size: var(--fuente0_mobile);
+    width: 75%;
+  }
+}
+.GemaInfonote-content-sidebar-element-subtext {
+  color: #801AAF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: var(--fuente-2);
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-sidebar-element-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-sidebar-element-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-content-sidebar-element-subtext a {
+  color: #801AAF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-sidebar-element-subtext a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-sidebar-element-subtext a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-imagetitle {
+  width: 100%;
+  position: relative;
+  padding: var(--fuente3) 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-imagetitle {
+    padding: var(--fuente3_mobile) 0;
+  }
+}
+.GemaInfonote-content-imagetitle-image {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+}
+.GemaInfonote-content-imagetitle-text {
+  color: var(--note_color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 900;
+  font-size: var(--fuente5);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+  width: 55%;
+  margin: 0;
+  position: absolute;
+  bottom: var(--fuente3);
+  left: 0;
+  line-height: 1.1;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-imagetitle-text {
+    max-width: 90vw;
+    font-size: var(--fuente5_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-imagetitle-text {
+    max-width: 90vw;
+    font-size: var(--fuente5_mobile);
+  }
+}
+.GemaInfonote-content-imagetitle-text a {
+  color: var(--note_color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-imagetitle-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-imagetitle-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-imagetitle-text {
+    bottom: var(--fuente3_mobile);
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaInfonote-content-fullimage {
+  width: 100%;
+  display: block;
+  margin: var(--fuente0) auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-fullimage {
+    margin: var(--fuente0_mobile) auto;
+  }
+}
+.GemaInfonote-content-infog1 {
+  border-top: solid #656565 1px;
+  border-bottom: solid #656565 1px;
+  padding: var(--fuente0) 0;
+  width: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: var(--fuente0) auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 75vw;
+  }
+}
+.GemaInfonote-content-infog1-content {
+  width: 220px;
+  padding-right: 20px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-content {
+    width: 75vw;
+    padding: 0 0 var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-infog1-content-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog1-content-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-content-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaInfonote-content-infog1-content-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog1-content-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog1-content-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-content-title {
+    padding-bottom: var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-content-infog1-content-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente-1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog1-content-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-content-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-infog1-content-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog1-content-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog1-content-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-content-text {
+    padding-bottom: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-content-infog1-slider {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FFDC00), to(#FFA627));
+  background-image: linear-gradient(bottom, #FFDC00, #FFA627);
+  width: 350px;
+  padding: 40px 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider {
+    width: 65vw;
+    padding: 10vw 5vw;
+  }
+}
+.GemaInfonote-content-infog1-slider-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.GemaInfonote-content-infog1-slider-element {
+  width: 330px;
+  padding: 0 50px 0 10px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider-element {
+    width: 55vw;
+    padding: 0 10vw 0 5vw;
+  }
+}
+.GemaInfonote-content-infog1-slider-element-bigtitle {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente7);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog1-slider-element-bigtitle {
+    max-width: 90vw;
+    font-size: var(--fuente7_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider-element-bigtitle {
+    max-width: 90vw;
+    font-size: var(--fuente7_mobile);
+  }
+}
+.GemaInfonote-content-infog1-slider-element-bigtitle a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog1-slider-element-bigtitle a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog1-slider-element-bigtitle a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog1-slider-element-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog1-slider-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaInfonote-content-infog1-slider-element-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog1-slider-element-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog1-slider-element-title a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog1-slider-element-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog1-slider-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-infog1-slider-element-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog1-slider-element-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog1-slider-element-text a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog1-slider-arrow {
+  position: absolute;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  top: calc(50% - 15px);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider-arrow {
+    top: calc(50% - 4vw);
+  }
+}
+.GemaInfonote-content-infog1-slider-arrow img {
+  width: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog1-slider-arrow img {
+    width: 8vw;
+  }
+}
+.GemaInfonote-content-infog2 {
+  border-top: solid #656565 1px;
+  border-bottom: solid #656565 1px;
+  padding: var(--fuente0) 0;
+  width: 620px;
+  margin: var(--fuente0) auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 75vw;
+  }
+}
+.GemaInfonote-content-infog2-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog2-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaInfonote-content-infog2-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog2-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog2-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-title {
+    padding-bottom: var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-content-infog2-slider {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FFDC00), to(#FFA627));
+  background-image: linear-gradient(bottom, #FFDC00, #FFA627);
+  width: 620px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider {
+    width: 65vw;
+    padding: 5vw;
+  }
+}
+.GemaInfonote-content-infog2-slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-container {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+}
+.GemaInfonote-content-infog2-slider-element {
+  width: 310px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element {
+    width: 55vw;
+    padding: 0 5vw;
+  }
+}
+.GemaInfonote-content-infog2-slider-element-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog2-slider-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element-title {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaInfonote-content-infog2-slider-element-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog2-slider-element-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog2-slider-element-title a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog2-slider-element-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog2-slider-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-content-infog2-slider-element-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog2-slider-element-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog2-slider-element-text a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog2-slider-element:first-of-type {
+  border-right: solid #fff 1px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element:first-of-type {
+    border: none;
+  }
+}
+.GemaInfonote-content-infog2-slider-element-box {
+  width: 270px;
+  padding: 20px;
+  border-top: solid #fff 1px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element-box {
+    width: 55vw;
+    padding: 3vw 0;
+  }
+}
+.GemaInfonote-content-infog2-slider-element-box:first-of-type {
+  border-top: none;
+}
+.GemaInfonote-content-infog2-slider-element-box-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente-1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog2-slider-element-box-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element-box-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-infog2-slider-element-box-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog2-slider-element-box-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog2-slider-element-box-title a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog2-slider-element-box-list > li {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente-3);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog2-slider-element-box-list > li {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element-box-list > li {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-infog2-slider-element-box-list > li a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog2-slider-element-box-list > li a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog2-slider-element-box-list > li a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog2-slider-element-box-list > li:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.GemaInfonote-content-infog2-slider-element-box-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog2-slider-element-box-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-element-box-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-content-infog2-slider-element-box-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog2-slider-element-box-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog2-slider-element-box-text a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-content-infog2-slider-arrow {
+  display: none;
+  position: absolute;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  top: calc(50% - 15px);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-arrow {
+    display: block;
+    top: calc(50% - 4vw);
+  }
+}
+.GemaInfonote-content-infog2-slider-arrow img {
+  width: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog2-slider-arrow img {
+    width: 8vw;
+  }
+}
+.GemaInfonote-content-infog3 {
+  position: relative;
+  padding: 28px 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog3 {
+    padding: 5vw 0;
+  }
+}
+.GemaInfonote-content-infog3.title, .GemaInfonote-content-infog3-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-content-infog3.title, .GemaInfonote-content-infog3-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog3.title, .GemaInfonote-content-infog3-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaInfonote-content-infog3.title a, .GemaInfonote-content-infog3-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-content-infog3.title a:hover, .GemaInfonote-content-infog3-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-content-infog3.title a:visited, .GemaInfonote-content-infog3-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog3.title, .GemaInfonote-content-infog3-title {
+    padding-bottom: var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-content-infog3-fullimage {
+  width: 620px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog3-fullimage {
+    width: 75vw;
+  }
+}
+.GemaInfonote-content-infog3-scroll {
+  width: 620px;
+  height: 245px;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog3-scroll {
+    width: 75vw;
+    height: 50vw;
+  }
+}
+.GemaInfonote-content-infog3-scroll-img {
+  height: 100%;
+}
+.GemaInfonote-content-infog3-arrow {
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 40px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-content-infog3-arrow {
+    width: 7vw;
+    bottom: 9vw;
+  }
+}
+.GemaInfonote-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 20;
+  cursor: pointer;
+  display: none;
+}
+.GemaInfonote-modal.opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.GemaInfonote-modal-container {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: var(--fuente0);
+  padding: var(--fuente4);
+  cursor: auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-container {
+    padding: 5vw;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+.GemaInfonote-modal-text {
+  width: 700px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: var(--fuente-2);
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-modal-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-modal-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-modal-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-modal-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-text {
+    width: 80vw;
+  }
+}
+.GemaInfonote-modal-img {
+  width: 800px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-img {
+    width: 80vw;
+  }
+}
+.GemaInfonote-modal-names {
+  padding-bottom: var(--fuente1);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-names {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-modal-names-item {
+  padding: var(--fuente0) var(--fuente-2);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-names-item {
+    width: 36vw;
+    padding: 2vw;
+  }
+}
+.GemaInfonote-modal-names-item-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-modal-names-item-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-names-item-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-modal-names-item-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-modal-names-item-title a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-modal-names-item-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-names-item-title {
+    padding-bottom: 2vw;
+  }
+}
+.GemaInfonote-modal-names-item-subtitle {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-modal-names-item-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-names-item-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-modal-names-item-subtitle a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-modal-names-item-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-modal-names-item-subtitle a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-names-item-subtitle {
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaInfonote-modal-logos {
+  position: relative;
+  z-index: 5;
+  width: 900px;
+  margin: 24px auto;
+  border-top: solid #fff 1px;
+  padding-top: var(--fuente2);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-logos {
+    width: 80vw;
+    margin: 2vw auto;
+    padding-top: var(--fuente2_mobile);
+  }
+}
+.GemaInfonote-modal-logos-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: var(--fuente4);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-logos-elements {
+    padding-bottom: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-modal-logos-elements-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  max-width: 33%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-logos-elements-item {
+    max-width: 30vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: var(--fuente-2_mobile);
+  }
+}
+.GemaInfonote-modal-logos-elements-item-text {
+  width: 100%;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: var(--fuente1);
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-modal-logos-elements-item-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-logos-elements-item-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaInfonote-modal-logos-elements-item-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-modal-logos-elements-item-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-modal-logos-elements-item-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-logos-elements-item-text {
+    margin-bottom: var(--fuente-2_mobile);
+  }
+}
+.GemaInfonote-modal-logos-elements-item-image {
+  height: 58px;
+  max-width: 160px;
+  margin: 0 var(--fuente-3);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.GemaInfonote-modal-logos-text {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: var(--fuente-2);
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-modal-logos-text {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-modal-logos-text {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaInfonote-modal-logos-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-modal-logos-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-modal-logos-text a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-fixedbutton {
+  position: fixed;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  cursor: pointer;
+}
+.GemaInfonote-fixedbutton.big {
+  right: 0;
+  bottom: 2%;
+  height: 220px;
+  z-index: 10;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-fixedbutton.big {
+    height: 45vw;
+  }
+}
+.GemaInfonote-fixedbutton.big:hover {
+  bottom: calc(2% - 5px);
+  height: 225px;
+}
+.GemaInfonote-fixedbutton.small {
+  bottom: 30%;
+  height: 30px;
+  right: 30px;
+  z-index: 15;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-fixedbutton.small {
+    bottom: 5vh;
+    height: 7vw;
+    right: auto;
+    left: 4vw;
+  }
+}
+.GemaInfonote-fixedbutton.small:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.GemaInfonote-fixedbutton img {
+  height: 100%;
+}
+.GemaInfonote-mixed-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: var(--fuente0);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-mixed-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-mixed-text {
+  width: 470px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-mixed-text {
+    width: 100%;
+  }
+}
+.GemaInfonote-mixed-text p {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  line-height: 1.5;
+  padding-bottom: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-mixed-text p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-mixed-text p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-mixed-text p a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-mixed-text p a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-mixed-text p a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-mixed-text p {
+    padding-bottom: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-mixed-text p span {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+.GemaInfonote-mixed-img {
+  width: 470px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-mixed-img {
+    width: 100%;
+    margin: var(--fuente0) 0;
+  }
+}
+.GemaInfonote-whiteline {
+  width: 100%;
+  border-top: solid #fff 1px;
+}
+.GemaInfonote-stretch {
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-stretch {
+    width: 75vw;
+    padding: 5vw 0;
+  }
+}
+.GemaInfonote-stretch > p {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente0);
+  line-height: 1.5;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-stretch > p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-stretch > p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-stretch > p a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-stretch > p a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-stretch > p a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-stretch > p > span {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+.GemaInfonote-stretch > p.title {
+  text-transform: uppercase;
+  font-size: var(--fuente1);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-stretch > p.title {
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-stretch.sans > p {
+  font-family: "Noto Sans", sans-serif;
+}
+.GemaInfonote-twocolumn {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  position: relative;
+  padding: 50px 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-twocolumn {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+    padding: 5vw 0;
+  }
+}
+.GemaInfonote-twocolumn p {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente1);
+  line-height: 1.5;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-twocolumn p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-twocolumn p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-twocolumn p a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-twocolumn p a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-twocolumn p a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital {
+  color: #4A5AA4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente7);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: absolute;
+  left: -45px;
+  top: 50px;
+  line-height: 0.7;
+  font-size: 150px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital {
+    max-width: 90vw;
+    font-size: var(--fuente7_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital {
+    max-width: 90vw;
+    font-size: var(--fuente7_mobile);
+  }
+}
+.GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital a {
+  color: #4A5AA4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-twocolumn p.GemaInfonote-twocolumn-capital {
+    position: static;
+    margin-bottom: 10vw;
+    font-size: 40vw;
+    text-align: center;
+    line-height: 0.7;
+    background: transparent var(--bg_image) center center no-repeat;
+    background-size: contain;
+  }
+}
+.GemaInfonote-twocolumn > p > span {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+.GemaInfonote-sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 50px auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-sticky {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5vw auto;
+  }
+}
+.GemaInfonote-sticky-content {
+  width: 450px;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-sticky-content {
+    width: 100%;
+  }
+}
+.GemaInfonote-sticky-content p {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente0);
+  line-height: 1.5;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-sticky-content p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-sticky-content p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaInfonote-sticky-content p a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-sticky-content p a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-sticky-content p a:visited {
+  text-decoration: none;
+}
+.GemaInfonote-sticky-content p span {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+.GemaInfonote-sticky-content img {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-sticky-content img {
+    display: block;
+    width: 75vw;
+    margin: 3vw auto;
+  }
+}
+.GemaInfonote-sticky-image {
+  width: 390px;
+  position: sticky;
+  top: 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-sticky-image {
+    display: none;
+  }
+}
+.GemaInfonote-quot {
+  position: relative;
+  width: 790px;
+  margin: 0 auto var(--fuente4);
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-quot {
+    width: 72vw;
+    margin: 0 0 var(--fuente1_mobile);
+  }
+}
+.GemaInfonote-quot-text {
+  color: var(--note_color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 900;
+  font-size: var(--fuente5);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-quot-text {
+    max-width: 90vw;
+    font-size: var(--fuente5_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-quot-text {
+    max-width: 90vw;
+    font-size: var(--fuente5_mobile);
+  }
+}
+.GemaInfonote-quot-text a {
+  color: var(--note_color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-quot-text a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-quot-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-quot-text {
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaInfonote-quot-subtext {
+  color: #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 70%;
+  margin: var(--fuente2) 0 0 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaInfonote-quot-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-quot-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaInfonote-quot-subtext a {
+  color: #333;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaInfonote-quot-subtext a:hover {
+  opacity: 0.8;
+}
+.GemaInfonote-quot-subtext a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-quot-subtext {
+    font-size: var(--fuente1_mobile);
+    width: 100%;
+  }
+}
+.GemaInfonote-quot-subtext span {
+  font-weight: 700;
+}
+.GemaInfonote-quot-icon {
+  position: absolute;
+  right: -125px;
+  bottom: 20px;
+  width: 250px;
+  z-index: -1;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-quot-icon {
+    width: 35vw;
+    bottom: auto;
+    top: 3vw;
+    right: -30vw;
+  }
+}
+.GemaInfonote-line {
+  background-color: var(--note_color);
+  width: 270px;
+  height: 6px;
+  border-radius: 20px;
+  margin: 50px auto;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-line {
+    width: 40vw;
+    height: 1.5vw;
+    margin: 10vw auto;
+  }
+}
+.GemaInfonote-fullimage {
+  width: 100vw;
+  display: block;
+  margin: 30px 0 30px calc(-50vw + 390px);
+  position: relative;
+  z-index: 15;
+}
+@media screen and (max-width: 600px) {
+  .GemaInfonote-fullimage {
+    margin: 10vw auto 0 -15vw;
+  }
+}
+
+.GemaDatabase {
+  padding: var(--fuente0) 0 var(--fuente2);
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase {
+    padding: var(--fuente0_mobile) 0 var(--fuente2_mobile);
+  }
+}
+.GemaDatabase-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: var(--fuente-3) 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: var(--fuente-3_mobile) 0;
+  }
+}
+.GemaDatabase-form-select {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  border: #656565;
+  border-radius: 50vw;
+  padding: var(--fuente-2) var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-form-select {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-select {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaDatabase-form-select a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-form-select a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-form-select a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-select {
+    width: 75vw;
+    padding: var(--fuente-2_mobile) var(--fuente1_mobile);
+    margin: var(--fuente-2_mobile) 0;
+  }
+}
+.GemaDatabase-form-radio {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-radio {
+    width: 75vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: var(--fuente-3_mobile) 0;
+  }
+}
+.GemaDatabase-form-radio > input {
+  width: 20px;
+  height: 20px;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-radio > input {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+.GemaDatabase-form-radio > label {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin: 0 0 0 var(--fuente0);
+  max-width: 260px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-form-radio > label {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-radio > label {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaDatabase-form-radio > label a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-form-radio > label a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-form-radio > label a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-radio > label {
+    max-width: 60vw;
+  }
+}
+.GemaDatabase-form-button {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--note_color);
+  border: none;
+  cursor: pointer;
+  border-radius: 50vw;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  padding: var(--fuente-2) var(--fuente3);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-form-button {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-button {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaDatabase-form-button a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-form-button a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-form-button a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-form-button {
+    padding: var(--fuente-2_mobile) var(--fuente3_mobile);
+  }
+}
+.GemaDatabase-form-button:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-loading, .GemaDatabase-noresults {
+  width: 100%;
+  padding-top: var(--fuente2);
+}
+.GemaDatabase-loading > p, .GemaDatabase-noresults > p {
+  color: #801AAF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-loading > p, .GemaDatabase-noresults > p {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-loading > p, .GemaDatabase-noresults > p {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaDatabase-loading > p a, .GemaDatabase-noresults > p a {
+  color: #801AAF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-loading > p a:hover, .GemaDatabase-noresults > p a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-loading > p a:visited, .GemaDatabase-noresults > p a:visited {
+  text-decoration: none;
+}
+.GemaDatabase-nextbutton {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: block;
+  margin: var(--fuente0) 0 0 auto;
+  background-color: var(--note_color);
+  border: none;
+  cursor: pointer;
+  border-radius: 50vw;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  padding: var(--fuente-2) var(--fuente3);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-nextbutton {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-nextbutton {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaDatabase-nextbutton a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-nextbutton a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-nextbutton a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-nextbutton {
+    padding: var(--fuente-2_mobile) var(--fuente3_mobile);
+  }
+}
+.GemaDatabase-nextbutton:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.GemaDatabase-elements-item {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 440px;
+  border-radius: var(--fuente0);
+  margin-top: var(--fuente0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item {
+    width: 67vw;
+    padding: 4vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.GemaDatabase-elements-item-info {
+  width: 235px;
+  padding-right: 15px;
+  border-right: solid #fff 1px;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-info {
+    border-right: none;
+    border-bottom: solid #fff 0.2vw;
+  }
+}
+.GemaDatabase-elements-item-info-subtitle {
+  color: #FFDC00;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-elements-item-info-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-info-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaDatabase-elements-item-info-subtitle a {
+  color: #FFDC00;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-elements-item-info-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-elements-item-info-subtitle a:visited {
+  text-decoration: none;
+}
+.GemaDatabase-elements-item-info-title {
+  color: #FFDC00;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-elements-item-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaDatabase-elements-item-info-title a {
+  color: #FFDC00;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-elements-item-info-title a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-elements-item-info-title a:visited {
+  text-decoration: none;
+}
+.GemaDatabase-elements-item-info-list-element {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-left: 18px;
+  position: relative;
+  padding-top: var(--fuente-3);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-elements-item-info-list-element {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-info-list-element {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaDatabase-elements-item-info-list-element a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-elements-item-info-list-element a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-elements-item-info-list-element a:visited {
+  text-decoration: none;
+}
+.GemaDatabase-elements-item-info-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: var(--fuente0);
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-info-social {
+    padding: var(--fuente0_mobile) 0;
+  }
+}
+.GemaDatabase-elements-item-info-social-icon {
+  padding: 0 var(--fuente-3);
+}
+.GemaDatabase-elements-item-info-social-icon img {
+  width: var(--fuente2);
+  height: var(--fuente2);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.GemaDatabase-elements-item-list {
+  width: 175px;
+  padding-left: 15px;
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-list {
+    padding: 3vw 0 0 3vw;
+  }
+}
+.GemaDatabase-elements-item-list-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-elements-item-list-title {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-list-title {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaDatabase-elements-item-list-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-elements-item-list-title a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-elements-item-list-title a:visited {
+  text-decoration: none;
+}
+.GemaDatabase-elements-item-list-list-item {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 3px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaDatabase-elements-item-list-list-item {
+    max-width: 90vw;
+    font-size: var(--fuente-3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaDatabase-elements-item-list-list-item {
+    max-width: 90vw;
+    font-size: var(--fuente-3_mobile);
+  }
+}
+.GemaDatabase-elements-item-list-list-item a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaDatabase-elements-item-list-list-item a:hover {
+  opacity: 0.8;
+}
+.GemaDatabase-elements-item-list-list-item a:visited {
+  text-decoration: none;
+}
+
+.GemaQuienes {
+  width: 550px;
+  min-height: 100vh;
+  padding-right: calc(78vw - 550px);
+  padding-left: 7vw;
+  margin-left: 15vw;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #2C2C2C;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes {
+    width: 77vw;
+    margin-left: 15vw;
+    padding: 0 4vw;
+  }
+}
+.GemaQuienes-text {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaQuienes-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-text a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-text a:visited {
+  text-decoration: none;
+}
+.GemaQuienes-elements {
+  padding: var(--fuente1) 0 var(--fuente3);
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements {
+    padding: var(--fuente1_mobile) 0 var(--fuente3_mobile);
+  }
+}
+.GemaQuienes-elements-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
+  margin-top: var(--fuente0);
+  margin-bottom: var(--fuente0);
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements-item {
+    width: 75vw;
+    margin: var(--fuente0_mobile) auto;
+  }
+}
+.GemaQuienes-elements-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.GemaQuienes-elements-item-image {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #656565;
+  border-radius: 50vw;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements-item-image {
+    width: 23vw;
+    height: 23vw;
+  }
+}
+.GemaQuienes-elements-item-content {
+  width: 270px;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements-item-content {
+    width: 50vw;
+  }
+}
+.GemaQuienes-elements-item-content-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-elements-item-content-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements-item-content-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaQuienes-elements-item-content-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-elements-item-content-title a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-elements-item-content-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements-item-content-title {
+    font-size: 3.5vw;
+  }
+}
+.GemaQuienes-elements-item-content-text {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-elements-item-content-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-elements-item-content-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaQuienes-elements-item-content-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-elements-item-content-text a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-elements-item-content-text a:visited {
+  text-decoration: none;
+}
+.GemaQuienes-elements-item:nth-of-type(odd) {
+  margin-right: auto;
+}
+.GemaQuienes-elements-item:nth-of-type(even) {
+  margin-left: auto;
+}
+.GemaQuienes-quote {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+  position: fixed;
+  right: calc(39vw - 421px);
+  top: calc(50vh - 150px);
+  width: 285px;
+  max-width: 35vw;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-quote {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-quote {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaQuienes-quote a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-quote a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-quote a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-quote {
+    position: static;
+    width: 100%;
+    font-size: var(--fuente1_mobile);
+    padding-bottom: 7vw;
+  }
+}
+.GemaQuienes-linetitle {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-linetitle {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-linetitle {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaQuienes-linetitle a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-linetitle a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-linetitle a:visited {
+  text-decoration: none;
+}
+.GemaQuienes-linetitle::after {
+  content: "";
+  background-color: #fff;
+  width: 90%;
+  height: 2px;
+  margin-left: var(--fuente-2);
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-linetitle::after {
+    height: 0.1vw;
+    margin-left: var(--fuente-2_mobile);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-linetitle {
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaQuienes-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 20;
+  cursor: pointer;
+  display: none;
+}
+.GemaQuienes-modal.opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.GemaQuienes-modal-container {
+  width: 800px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: var(--fuente0);
+  padding: var(--fuente4) 60px;
+  cursor: auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-container {
+    padding: 5vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    width: 60vw;
+    margin-left: 15vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 15vw;
+  }
+}
+.GemaQuienes-modal-image {
+  width: 270px;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-image {
+    width: 35vw;
+    margin-bottom: 5vw;
+  }
+}
+.GemaQuienes-modal-info {
+  width: 500px;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info {
+    width: 60vw;
+  }
+}
+.GemaQuienes-modal-info-name {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-modal-info-name {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info-name {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaQuienes-modal-info-name a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-modal-info-name a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-modal-info-name a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info-name {
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaQuienes-modal-info-position {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-modal-info-position {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info-position {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaQuienes-modal-info-position a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-modal-info-position a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-modal-info-position a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info-position {
+    font-size: var(--fuente-1_mobile);
+    margin-top: 1vw;
+  }
+}
+.GemaQuienes-modal-info-text {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: var(--fuente1);
+  max-height: 170px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaQuienes-modal-info-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaQuienes-modal-info-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaQuienes-modal-info-text a:hover {
+  opacity: 0.8;
+}
+.GemaQuienes-modal-info-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-info-text {
+    margin-top: var(--fuente-1_mobile);
+    max-height: 60vw;
+  }
+}
+.GemaQuienes-modal-social {
+  width: 50px;
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-social {
+    right: 15vw;
+    bottom: 2.5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 40vw;
+  }
+}
+.GemaQuienes-modal-social-icon {
+  display: block;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  width: 30px;
+  margin-bottom: var(--fuente-3);
+}
+@media screen and (max-width: 600px) {
+  .GemaQuienes-modal-social-icon {
+    margin: 0 1.5vw;
+    width: 6vw;
+  }
+}
+.GemaQuienes-modal-social-icon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.GemaQuienes-modal-social-icon img {
+  width: 100%;
+}
+
+.GemaMap {
+  width: 980px;
+  padding-bottom: 150px;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap {
+    width: 75vw;
+    padding-bottom: 20vh;
+  }
+}
+.GemaMap-img {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 3;
+  width: 360px;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-img {
+    position: static;
+    width: 75vw;
+  }
+}
+.GemaMap-img img {
+  width: 100%;
+}
+.GemaMap-info {
+  position: relative;
+  z-index: 5;
+  width: 600px;
+  padding-left: 380px;
+  padding-top: 50px;
+  min-height: 510px;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info {
+    min-height: auto;
+    width: 75vw;
+    padding: 5vw 0 0;
+  }
+}
+.GemaMap-info-select {
+  color: #656565;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: block;
+  margin: 0 auto var(--fuente0);
+  padding: 6px var(--fuente0);
+  border-radius: 50px;
+  border: solid #656565 1px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-select {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-select {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaMap-info-select a {
+  color: #656565;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-select a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-select a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-select {
+    width: 75vw;
+    padding: 1vw var(--fuente0_mobile);
+  }
+}
+.GemaMap-info-select * {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-select * {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-select * {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaMap-info-select * a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-select * a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-select * a:visited {
+  text-decoration: none;
+}
+.GemaMap-info-numbers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: var(--fuente-1) 0 var(--fuente3);
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--fuente2_mobile) 0 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    border-bottom: solid #656565 0.3vw;
+    margin-bottom: 10vw;
+  }
+}
+.GemaMap-info-numbers-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 8px 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item {
+    max-width: 37.5vw;
+    padding-bottom: 2vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item.floatright {
+    position: absolute;
+    top: 25vw;
+    right: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item.floatleft {
+    position: absolute;
+    top: 100vw;
+    left: -5vw;
+  }
+}
+.GemaMap-info-numbers-item-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-numbers-item-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaMap-info-numbers-item-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-numbers-item-text a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-numbers-item-text a:visited {
+  text-decoration: none;
+}
+.GemaMap-info-numbers-item-subtext {
+  color: #801AAF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente-2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: var(--fuente-1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-numbers-item-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente-2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente-2_mobile);
+  }
+}
+.GemaMap-info-numbers-item-subtext a {
+  color: #801AAF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-numbers-item-subtext a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-numbers-item-subtext a:visited {
+  text-decoration: none;
+}
+.GemaMap-info-numbers-item-number {
+  color: #801AAF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3px 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-numbers-item-number {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item-number {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaMap-info-numbers-item-number a {
+  color: #801AAF;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-numbers-item-number a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-numbers-item-number a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-numbers-item-number {
+    padding: 1vw 0;
+  }
+}
+.GemaMap-info-content {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: n-resize;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-content {
+    max-height: none;
+  }
+}
+.GemaMap-info-content::-webkit-scrollbar {
+  width: 5px;
+}
+.GemaMap-info-content::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #CECECE;
+}
+.GemaMap-info-content::-webkit-scrollbar-thumb {
+  background: #64008C;
+  border-radius: 10px;
+}
+.GemaMap-info-content-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-content-title {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-content-title {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaMap-info-content-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-content-title a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-content-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-content-title {
+    padding-bottom: var(--fuente0_mobile);
+  }
+}
+.GemaMap-info-content-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-right: 5px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaMap-info-content-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-content-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaMap-info-content-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaMap-info-content-text a:hover {
+  opacity: 0.8;
+}
+.GemaMap-info-content-text a:visited {
+  text-decoration: none;
+}
+.GemaMap-info-content-text li {
+  list-style: disc;
+  margin-left: auto;
+  padding-bottom: var(--fuente0);
+  width: 560px;
+}
+@media screen and (max-width: 600px) {
+  .GemaMap-info-content-text li {
+    padding-bottom: var(--fuente0_mobile);
+    width: 70vw;
+  }
+}
+
+.GemaIcon-phone:before {
+  content: "";
+  background: transparent url("./assets/phone.svg") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 12px;
+  height: 16px;
+  display: block;
+  left: -18px;
+}
+.GemaIcon-mail:before {
+  content: "";
+  background: transparent url("./assets/mail.svg") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 12px;
+  height: 16px;
+  display: block;
+  left: -18px;
+}
+.GemaIcon-ubication:before {
+  content: "";
+  background: transparent url("./assets/location.svg") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 12px;
+  height: 16px;
+  display: block;
+  left: -18px;
+}
+.GemaIcon-icon:before {
+  content: "";
+  background: transparent url("./assets/web.svg") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 12px;
+  height: 16px;
+  display: block;
+  left: -18px;
+}
+
+.GemaSifilis-header {
+  position: relative;
+  z-index: 50;
+  width: 100vw;
+  height: 169vw;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header {
+    height: 649vw;
+  }
+}
+.GemaSifilis-header-image {
+  width: 100vw;
+  position: absolute;
+  z-index: 50;
+}
+.GemaSifilis-header-logos {
+  position: absolute;
+  z-index: 55;
+  right: 14vw;
+  top: 20vw;
+  width: 30vw;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-logos {
+    right: 12.5vw;
+    top: 145vw;
+    width: 75vw;
+  }
+}
+.GemaSifilis-header-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Serif Display", "Noto Serif", serif;
+  font-weight: 900;
+  font-size: var(--fuente6);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+  line-height: 1;
+  text-align: center;
+  position: absolute;
+  z-index: 55;
+  width: 30vw;
+  right: 15vw;
+  top: 27vw;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-header-title {
+    max-width: 90vw;
+    font-size: var(--fuente6_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-title {
+    max-width: 90vw;
+    font-size: var(--fuente6_mobile);
+  }
+}
+.GemaSifilis-header-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-header-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-header-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-title {
+    width: 80vw;
+    right: 10vw;
+    top: 164vw;
+    font-size: var(--fuente5_mobile);
+  }
+}
+.GemaSifilis-header-subtitle {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 40vw;
+  position: absolute;
+  right: 10vw;
+  top: 37vw;
+  letter-spacing: 3px;
+  z-index: 55;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-header-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaSifilis-header-subtitle a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-header-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-header-subtitle a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-subtitle {
+    width: 80vw;
+    right: 10vw;
+    top: 192vw;
+    letter-spacing: 2px;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaSifilis-header-firsttext {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+  width: 30vw;
+  position: absolute;
+  right: 17vw;
+  top: 78vw;
+  z-index: 55;
+  line-height: 1.3;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-header-firsttext {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-firsttext {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaSifilis-header-firsttext a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-header-firsttext a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-header-firsttext a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-firsttext {
+    width: 65vw;
+    right: auto;
+    left: 10vw;
+    top: 378vw;
+    font-size: var(--fuente0);
+  }
+}
+.GemaSifilis-header-secondtext {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-style: italic;
+  width: 30vw;
+  position: absolute;
+  left: 15vw;
+  top: 138vw;
+  z-index: 55;
+  line-height: 1.3;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-header-secondtext {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-secondtext {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaSifilis-header-secondtext a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-header-secondtext a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-header-secondtext a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-header-secondtext {
+    width: 65vw;
+    left: auto;
+    right: 10vw;
+    top: 592vw;
+    font-size: var(--fuente0);
+  }
+}
+.GemaSifilis-footer {
+  margin: 20px auto 0;
+  position: relative;
+  border-top: solid 1px #333;
+  width: 1000px;
+  padding: 50px 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-footer {
+    border-top-width: 0.1vw;
+    width: 80vw;
+    padding: 5vw 0;
+    margin-top: 3vw;
+  }
+}
+.GemaSifilis-footer-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-footer-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-footer-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-footer-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-footer-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-footer-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-footer-text {
+    width: 100%;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSifilis-footer-text-spaced {
+  margin-top: 20px;
+}
+.GemaSifilis-footer-img {
+  height: 80px;
+  display: block;
+  margin: 30px auto 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-footer-img {
+    height: auto;
+    width: 100%;
+    max-height: 13vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+.GemaSifilis-footer-imgs {
+  height: 80px;
+  width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px auto 0;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-footer-imgs {
+    height: auto;
+    width: 80vw;
+  }
+}
+.GemaSifilis-footer-imgs-item {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-footer-imgs-item {
+    max-height: 13vw;
+    width: 38vw;
+  }
+}
+.GemaSifilis-icon-big {
+  position: absolute;
+  width: 200px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-icon-big {
+    width: 37vw;
+  }
+}
+.GemaSifilis-icon-medium {
+  position: absolute;
+  width: 150px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-icon-medium {
+    width: 27vw;
+  }
+}
+.GemaSifilis-icon-small {
+  position: absolute;
+  width: 100px;
+}
+.GemaSifilis-slider {
+  width: 700px;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider {
+    width: 70vw;
+    margin-left: 5vw;
+  }
+}
+.GemaSifilis-slider-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.GemaSifilis-slider-element {
+  width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70vw;
+  }
+}
+.GemaSifilis-slider-element-image {
+  width: 340px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-image {
+    width: 70vw;
+  }
+}
+.GemaSifilis-slider-element-info {
+  width: 340px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-info {
+    width: 70vw;
+  }
+}
+.GemaSifilis-slider-element-info-title {
+  color: #4A5AA4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: var(--fuente1);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-slider-element-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-slider-element-info-title a {
+  color: #4A5AA4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-slider-element-info-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-slider-element-info-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-info-title {
+    padding: var(--fuente1_mobile) 0;
+  }
+}
+.GemaSifilis-slider-element-info-text {
+  color: #4A5AA4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: var(--fuente0);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-slider-element-info-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-info-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-slider-element-info-text a {
+  color: #4A5AA4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-slider-element-info-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-slider-element-info-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-info-text {
+    margin-bottom: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-slider-element-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--fuente0) 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-slider-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSifilis-slider-element-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-slider-element-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-slider-element-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-element-text {
+    padding: var(--fuente0_mobile) 0;
+  }
+}
+.GemaSifilis-slider-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  width: 25px;
+  top: 50%;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-button {
+    width: 4vw;
+    top: 70%;
+  }
+}
+.GemaSifilis-slider-button img {
+  width: 100%;
+}
+.GemaSifilis-slider-button.left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: -45px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-button.left {
+    left: -1vw;
+  }
+}
+.GemaSifilis-slider-button.left:hover {
+  -webkit-transform: scale(1.05) rotate(180deg);
+          transform: scale(1.05) rotate(180deg);
+}
+.GemaSifilis-slider-button.right {
+  right: -45px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-slider-button.right {
+    right: -1vw;
+  }
+}
+.GemaSifilis-slider-button.right:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.GemaSifilis-digits {
+  cursor: pointer;
+  margin-top: var(--fuente0);
+  padding-top: var(--fuente0);
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits {
+    margin-top: var(--fuente0_mobile);
+    padding-top: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits:before {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  content: "Click en la gráfica para interactuar";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits:before {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits:before {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits:before a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits:before a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits:before a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits:before {
+    font-size: var(--fuente-1_mobile);
+    content: "Toca la gráfica para interactuar";
+  }
+}
+.GemaSifilis-digits.test {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  margin: calc(50vh - 290px) calc(50vw - 520px);
+  background-color: #AEC1DD;
+  padding: 30px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits.test {
+    padding: 0;
+    margin: calc(50vh - 82vw) 12.5vw;
+  }
+}
+.GemaSifilis-digits.test:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #AEC1DD;
+}
+.GemaSifilis-digits.test:after {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  content: "Click en la imagen para interactuar";
+  position: fixed;
+  right: calc(50vw - 520px);
+  top: calc(50vh - (290px + var(--fuente2)));
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits.test:after {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits.test:after {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits.test:after a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits.test:after a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits.test:after a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits.test:after {
+    content: "Toca la imagen para interactuar";
+    top: calc(50vh - (82vw + var(--fuente2_mobile)));
+    right: 12.5vw;
+  }
+}
+.GemaSifilis-digits-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  margin: var(--fuente1) 0;
+  position: relative;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-title {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-title {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaSifilis-digits-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-title {
+    margin: var(--fuente1_mobile) 0 0;
+  }
+}
+.GemaSifilis-digits-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin: var(--fuente-2) 0;
+  position: relative;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSifilis-digits-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-text {
+    font-size: var(--fuente-2_mobile);
+    margin: var(--fuente-3_mobile) 0;
+  }
+}
+.GemaSifilis-digits-text:last-child {
+  margin-bottom: var(--fuente1_mobile);
+}
+.GemaSifilis-digits-info {
+  display: none;
+}
+.GemaSifilis-digits-info.visible {
+  display: block;
+  position: relative;
+}
+.GemaSifilis-digits-info-title {
+  color: var(--element_text_color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: var(--fuente-3);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaSifilis-digits-info-title a {
+  color: var(--element_text_color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-info-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-info-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-title {
+    margin-bottom: var(--fuente-3_mobile);
+  }
+}
+.GemaSifilis-digits-info-subtitle {
+  color: #4A5AA4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-info-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-subtitle {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits-info-subtitle a {
+  color: #4A5AA4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-info-subtitle a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-info-subtitle a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-digits-info-siluetes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 980px;
+  margin-top: var(--fuente0);
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes {
+    width: 75vw;
+    margin-top: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits-info-siluetes-figure {
+  position: relative;
+  width: 120px;
+  margin: 0 10px;
+  padding-top: 100px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes-figure {
+    width: 23vw;
+    margin: 0 1vw;
+    padding-top: 16.5vw;
+    padding-bottom: 3vw;
+  }
+}
+.GemaSifilis-digits-info-siluetes-figure-image {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.GemaSifilis-digits-info-siluetes-figure-text {
+  position: relative;
+  z-index: 5;
+  color: var(--element_text_color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-info-siluetes-figure-text {
+    max-width: 90vw;
+    font-size: var(--fuente1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes-figure-text {
+    max-width: 90vw;
+    font-size: var(--fuente1_mobile);
+  }
+}
+.GemaSifilis-digits-info-siluetes-figure-text a {
+  color: var(--element_text_color);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-info-siluetes-figure-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-info-siluetes-figure-text a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-digits-info-siluetes-figure-subtext {
+  color: #4A5AA4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-info-siluetes-figure-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes-figure-subtext {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits-info-siluetes-figure-subtext a {
+  color: #4A5AA4;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-info-siluetes-figure-subtext a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-info-siluetes-figure-subtext a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-digits-info-siluetes-figure-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-info-siluetes-figure-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes-figure-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits-info-siluetes-figure-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-info-siluetes-figure-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-info-siluetes-figure-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes-figure-title {
+    margin-top: 1vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSifilis-digits-info-siluetes-figure:not(.active) {
+  opacity: 0.5;
+  padding-top: 144px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-info-siluetes-figure:not(.active) {
+    padding-top: 36vw;
+  }
+}
+.GemaSifilis-digits-graphic {
+  position: relative;
+  width: 980px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic {
+    width: 75vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.GemaSifilis-digits-graphic.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.GemaSifilis-digits-graphic-image {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+.GemaSifilis-digits-graphic-number {
+  position: absolute;
+  z-index: 2;
+  color: #7BA0D7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuenteExtraBig);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  line-height: 1;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-graphic-number {
+    max-width: 90vw;
+    font-size: var(--fuenteExtraBig_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-number {
+    max-width: 90vw;
+    font-size: var(--fuenteExtraBig_mobile);
+  }
+}
+.GemaSifilis-digits-graphic-number a {
+  color: #7BA0D7;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-graphic-number a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-graphic-number a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-number {
+    position: relative;
+  }
+}
+.GemaSifilis-digits-graphic-circles {
+  width: 470px;
+  height: 320px;
+  position: relative;
+  padding-top: 50px;
+  z-index: 5;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles {
+    padding-top: 5vw;
+    width: 75vw;
+    height: auto;
+  }
+  .GemaSifilis-digits-graphic-circles:nth-of-type(2) {
+    padding-bottom: 3vw;
+  }
+}
+.GemaSifilis-digits-graphic-circles-title {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-graphic-circles-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-title {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits-graphic-circles-title a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-graphic-circles-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-graphic-circles-title a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-digits-graphic-circles-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.GemaSifilis-digits-graphic-circles-content.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  text-align: right;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content.reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
+}
+.GemaSifilis-digits-graphic-circles-content-numbers {
+  width: 250px;
+  padding: 50px 0 40px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers {
+    width: 45vw;
+    padding: 0;
+    height: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers-element:nth-of-type(1) {
+    padding-bottom: 4vw;
+  }
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-bigtext {
+  color: var(--numberscolor);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers-element-bigtext {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers-element-bigtext {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-bigtext a {
+  color: var(--numberscolor);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-bigtext a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-bigtext a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-text {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente-1);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: var(--fuente-3);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers-element-text {
+    max-width: 90vw;
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-text a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-graphic-circles-content-numbers-element-text a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-numbers-element-text {
+    margin-top: 1vw;
+  }
+}
+.GemaSifilis-digits-graphic-circles-content-circle {
+  width: 220px;
+  padding: 50px 0 40px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-circle {
+    width: 28vw;
+    padding: 0;
+    height: auto;
+  }
+}
+.GemaSifilis-digits-graphic-circles-content-circle-element {
+  width: calc(var(--circlesize) * 1.8px);
+  height: calc(var(--circlesize) * 1.8px);
+  border-radius: 50%;
+  background-color: var(--numberscolor);
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-graphic-circles-content-circle-element {
+    width: calc(var(--circlesize) * 0.28vw);
+    height: calc(var(--circlesize) * 0.28vw);
+  }
+}
+.GemaSifilis-digits-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-button {
+    margin: var(--fuente1_mobile) auto;
+  }
+}
+.GemaSifilis-digits-button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.GemaSifilis-digits-button p {
+  color: #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-left: var(--fuente-2);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-digits-button p {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-digits-button p {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-digits-button p a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-digits-button p a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-digits-button p a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-map {
+  width: 980px;
+  height: 640px;
+  overflow: hidden;
+  background-color: var(--mapcolor);
+  cursor: pointer;
+  margin-top: var(--fuente0);
+  padding-top: var(--fuente0);
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map {
+    padding-top: var(--fuente1_mobile);
+    margin-top: var(--fuente0_mobile);
+    width: 75vw;
+    height: 140vw;
+  }
+}
+.GemaSifilis-map:before {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  content: "Click en la imagen para interactuar";
+  position: absolute;
+  right: var(--fuente-3);
+  top: var(--fuente-3);
+  z-index: 10;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-map:before {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map:before {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-map:before a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-map:before a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-map:before a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map:before {
+    right: 2vw;
+    top: 2vw;
+    content: "Toca la imagen para interactuar";
+    font-size: var(--fuente-1_mobile);
+  }
+}
+.GemaSifilis-map.test {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  margin: calc(50vh - 320px) calc(50vw - 490px);
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map.test {
+    margin: calc(50vh - 70vw) 12.5vw;
+  }
+}
+.GemaSifilis-map.test:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6705882353);
+}
+.GemaSifilis-map.test:after {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  content: "Click en la imagen para interactuar";
+  position: fixed;
+  right: calc(50vw - 490px);
+  top: calc(50vh - (320px + var(--fuente2)));
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-map.test:after {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map.test:after {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-map.test:after a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-map.test:after a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-map.test:after a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map.test:after {
+    content: "Toca la imagen para interactuar";
+    top: calc(50vh - (70vw + var(--fuente2_mobile)));
+    right: 12.5vw;
+  }
+}
+.GemaSifilis-map img {
+  position: absolute;
+  z-index: 2;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+.GemaSifilis-map-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: var(--mapcolor);
+}
+.GemaSifilis-map-info.visible {
+  display: block;
+}
+.GemaSifilis-map-info-title {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente2);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 5;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-map-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map-info-title {
+    max-width: 90vw;
+    font-size: var(--fuente2_mobile);
+  }
+}
+.GemaSifilis-map-info-title a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-map-info-title a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-map-info-title a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map-info-title {
+    font-size: var(--fuente1_mobile);
+    top: 4vw;
+    left: 3vw;
+  }
+}
+.GemaSifilis-map-info-info {
+  z-index: 5;
+  position: absolute;
+  top: 320px;
+  left: 110px;
+  width: 228px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map-info-info {
+    top: auto;
+    bottom: 10vw;
+    left: 7.5vw;
+    width: 60vw;
+  }
+}
+.GemaSifilis-map-info-info-bigtext {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 900;
+  font-size: var(--fuente3);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: var(--fuente-2);
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-map-info-info-bigtext {
+    max-width: 90vw;
+    font-size: var(--fuente3_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map-info-info-bigtext {
+    max-width: 90vw;
+    font-size: var(--fuente3_mobile);
+  }
+}
+.GemaSifilis-map-info-info-bigtext a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-map-info-info-bigtext a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-map-info-info-bigtext a:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map-info-info-bigtext {
+    margin-bottom: var(--fuente-3_mobile);
+  }
+}
+.GemaSifilis-map-info-info-text {
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fuente0);
+  line-height: 1.2;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .GemaSifilis-map-info-info-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_tablet);
+  }
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map-info-info-text {
+    max-width: 90vw;
+    font-size: var(--fuente0_mobile);
+  }
+}
+.GemaSifilis-map-info-info-text a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.GemaSifilis-map-info-info-text a:hover {
+  opacity: 0.8;
+}
+.GemaSifilis-map-info-info-text a:visited {
+  text-decoration: none;
+}
+.GemaSifilis-map.position1 img {
+  width: 107%;
+  top: 30px;
+  right: -180px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map.position1 img {
+    width: 110%;
+    top: 40vw;
+    right: -5%;
+  }
+}
+.GemaSifilis-map.position2 img {
+  width: 170%;
+  top: -130px;
+  right: -340px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map.position2 img {
+    width: 300%;
+    top: 0;
+    right: -100%;
+  }
+}
+.GemaSifilis-map.position3 img {
+  width: 220%;
+  top: -233px;
+  right: -542px;
+}
+@media screen and (max-width: 600px) {
+  .GemaSifilis-map.position3 img {
+    width: 500%;
+    top: -50vw;
+    right: -200%;
+  }
+}
+
+#GemaEspiroqueta0 {
+  left: -160px;
+  top: 50px;
+}
+@media screen and (max-width: 600px) {
+  #GemaEspiroqueta0 {
+    display: none;
+  }
+}
+#GemaEspiroqueta2 {
+  right: -200px;
+  top: 15px;
+}
+@media screen and (max-width: 600px) {
+  #GemaEspiroqueta2 {
+    top: 213vw;
+    right: -27vw;
+  }
+}
+#GemaEspiroqueta3 {
+  left: -170px;
+  top: 200px;
+}
+@media screen and (max-width: 600px) {
+  #GemaEspiroqueta3 {
+    left: auto;
+    top: auto;
+    right: -27vw;
+    bottom: 70vw;
+  }
+}
+#GemaEspiroqueta4 {
+  right: -250px;
+  bottom: 150px;
+}
+@media screen and (max-width: 600px) {
+  #GemaEspiroqueta4 {
+    right: auto;
+    bottom: auto;
+    top: 0;
+    left: -37vw;
+  }
+}
+#GemaEspiroqueta6 {
+  left: 100px;
+  bottom: -80px;
+}
+@media screen and (max-width: 600px) {
+  #GemaEspiroqueta6 {
+    left: -25vw;
+    bottom: -21vw;
+  }
+}
+
+#GemaSifilis-fullimage {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

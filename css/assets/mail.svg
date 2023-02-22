@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="17" viewBox="0 0 21 17">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffdc00"/>
+      <stop offset="1" stop-color="#ffa627"/>
+    </linearGradient>
+  </defs>
+  <path id="Correo" d="M-4196-338a1,1,0,0,1-1-1v-10.35l9.594,4.264A1,1,0,0,0-4187-345a1,1,0,0,0,.405-.086l9.595-4.265V-339a1,1,0,0,1-1,1Zm-1-13.539V-353a1,1,0,0,1,1-1h18a1,1,0,0,1,1,1v1.461l-10,4.446Z" transform="translate(4197.5 354.5)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient)"/>
+</svg>

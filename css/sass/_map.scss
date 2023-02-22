@@ -1,0 +1,151 @@
+.GemaMap{
+  width: 980px;
+  padding-bottom: 150px;
+  position: relative;
+  @include mobile{
+    width: 75vw;
+    padding-bottom: 20vh;
+  }
+  &-img{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 3;
+    width: 360px;
+    @include mobile{
+      position: static;
+      width: 75vw;
+    }
+    & img{
+      width: 100%;
+    }
+  }
+  &-info{
+    position: relative;
+    z-index: 5;
+    width: 600px;
+    padding-left: 380px;
+    padding-top: 50px;
+    min-height: 510px;
+    @include mobile{
+      min-height: auto;
+      width: 75vw;
+      padding: 5vw 0 0;
+    }
+    &-select{
+      @include text($sans, 0, $gris, $bold);
+      display: block;
+      margin: 0 auto var(--fuente0);
+      padding: 6px var(--fuente0);
+      border-radius: 50px;
+      border: solid $gris 1px;
+      width: 300px;
+      text-align: center;
+      cursor: pointer;
+      @include mobile{
+        width: 75vw;
+        padding: 1vw var(--fuente0_mobile);
+      }
+      & *{
+        @include text;
+      }
+    }
+    &-numbers{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      padding: var(--fuente-1) 0 var(--fuente3);
+      @include mobile{
+        grid-template-columns: 1fr 1fr;
+        padding: var(--fuente2_mobile) 0 0;
+        align-items: flex-start;
+        border-bottom: solid $gris .3vw;
+        margin-bottom: 10vw;
+      }
+      &-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px 0;
+        @include mobile{
+          max-width: 37.5vw;
+          padding-bottom: 2vw;
+        }
+        &.floatright{
+          @include mobile{
+            position: absolute;
+            top: 25vw;
+            right: 0;
+          }
+        }
+        &.floatleft{
+          @include mobile{
+            position: absolute;
+            top: 100vw;
+            left: -5vw;
+          }
+        }
+        &-text{
+          @include text($sans, -1);
+        }
+        &-subtext{
+          @include text($sans, -2, $violeta, $bold);
+          min-height: var(--fuente-1);
+        }
+        &-number{
+          @include text($sans, 3, $violeta, $black);
+          padding: 3px 0;
+          @include mobile{
+            padding: 1vw 0;
+          }
+        }
+      }
+    }
+    &-content{
+      max-height: 400px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      cursor: n-resize;
+      @include mobile{
+        max-height: none;
+      }
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: $gris_claro;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $violeta_oscuro; 
+        border-radius: 10px;
+      }
+      &-title{
+        @include text($sans, 1, $negro, $bold);
+        padding-bottom: var(--fuente0);
+        @include mobile{
+          padding-bottom: var(--fuente0_mobile);
+        }
+        
+      }
+      &-text{
+        @include text;
+        padding-right: 5px;
+        & li{
+          list-style: disc;
+          margin-left: auto;
+          padding-bottom: var(--fuente0);
+          width: 560px;
+          @include mobile{
+            padding-bottom: var(--fuente0_mobile);
+            width: 70vw;
+          }
+        }
+      }
+    }
+  }
+}

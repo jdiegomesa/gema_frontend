@@ -1,0 +1,42 @@
+.GemaIcon{
+  &-phone:before{
+    content: '';
+    background: transparent url('./assets/phone.svg') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    display: block;
+    left: -18px;
+  }
+  &-mail:before{
+    content: '';
+    background: transparent url('./assets/mail.svg') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    display: block;
+    left: -18px;
+  }
+  &-ubication:before{
+    content: '';
+    background: transparent url('./assets/location.svg') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    display: block;
+    left: -18px;
+  }
+  &-icon:before{
+    content: '';
+    background: transparent url('./assets/web.svg') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 12px;
+    height: 16px;
+    display: block;
+    left: -18px;
+  }
+}

@@ -1,0 +1,50 @@
+-var title = 'Migrantes con derechos a la salud sexual y reproductiva'
+
+doctype html
+html
+  include ./components/_head.pug
+  body.relative
+    img.GemaBigbackground-image(src="https://gema.media/wp-content/uploads/2022/08/fondo_home-1.svg")
+    header.GemaBigbackground-header
+      h1.GemaBigbackground-header-title Migrantes <br/>con derechos
+      h2.GemaBigbackground-header-subtitle a la salud sexual y reproductiva
+      .GemaBigbackground-header-text
+        p La población venezolana migrante llega a Colombia con necesidades en salud sexual y salud reproductiva. Cruzan la frontera esperando mejorar su situación, pero enfrentan todo tipo de barreras, comenzando por el acceso a información. Las mujeres y las personas con orientación sexual e identidad y expresión de género diversas son los grupos más vulnerables. 
+        p ¿Qué ha hecho el Estado para garantizar sus derechos?<br/>¿A dónde pueden acudir si necesitan un servicio?<br/>¿Cómo acercarles la información?
+      img.GemaBigbackground-header-arrow(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+    .GemaBigbackground-circlemenu-container
+      ul.GemaBigbackground-circlemenu#GemaBigbackground-circlemenu(data-position="1")
+        li.GemaBigbackground-circlemenu-element
+          a(href="./nota_infografias.html")
+            img.GemaBigbackground-circlemenu-element-image(src="https://gema.media/wp-content/uploads/2022/08/migrantesderechos_reportaje_icon.svg")
+            p.GemaBigbackground-circlemenu-element-subtitle Reportaje
+            h3.GemaBigbackground-circlemenu-element-title Así es migrar y vivir con VIH en Colombia
+        li.GemaBigbackground-circlemenu-element
+          a(href="./nota_abierta.html")
+            img.GemaBigbackground-circlemenu-element-image(src="https://gema.media/wp-content/uploads/2022/08/migrantesderechos_base_icon.svg")
+            p.GemaBigbackground-circlemenu-element-subtitle Base de datos
+            h3.GemaBigbackground-circlemenu-element-title Servicios de salud sexual y reproductiva en Colombia
+        li.GemaBigbackground-circlemenu-element
+          a(href="./nota_abierta2.html")
+            img.GemaBigbackground-circlemenu-element-image(src="https://gema.media/wp-content/uploads/2022/08/migrantesderechos_infografia_icon.svg")
+            p.GemaBigbackground-circlemenu-element-subtitle Infografía
+            h3.GemaBigbackground-circlemenu-element-title Lo que cuentan los datos
+      button.GemaBigbackground-circlemenu-container-button.left(onclick="GemamoveSlide('GemaBigbackground-circlemenu', false)")
+        img(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+      button.GemaBigbackground-circlemenu-container-button.right(onclick="GemamoveSlide('GemaBigbackground-circlemenu', true)")
+        img(src="https://gema.media/wp-content/themes/gema-media/assets/down_white-arrow.svg")
+    footer.GemaBigbackground-footer
+      .GemaBigbackground-footer-elements 
+        .GemaBigbackground-footer-elements-item 
+          p.GemaBigbackground-footer-elements-item-text Un proyecto de:
+          img.GemaBigbackground-footer-elements-item-image(src="https://gema.media/wp-content/uploads/2022/08/GEMA.svg", alt="Logo de Gema")
+        .GemaBigbackground-footer-elements-item 
+          p.GemaBigbackground-footer-elements-item-text Con la financiación de:
+          img.GemaBigbackground-footer-elements-item-image(src="https://gema.media/wp-content/uploads/2022/08/embajadaEEUU.png", alt="Logo Embajada de EEUU")
+          img.GemaBigbackground-footer-elements-item-image(src="https://gema.media/wp-content/uploads/2022/08/TechCamp.png", alt="Logo Tech Camp")
+        .GemaBigbackground-footer-elements-item 
+          p.GemaBigbackground-footer-elements-item-text Y con el apoyo de:
+          img.GemaBigbackground-footer-elements-item-image(src="https://gema.media/wp-content/uploads/2022/08/cuestion_publica.png", alt="Logo Cuestión Pública")
+      p.GemaBigbackground-footer-text *Las opiniones aquí expuestas no reflejan la posición del Gobierno de Estados Unidos.
+      p.GemaBigbackground-footer-text ©GEMA - Todos los derechos reservados<br/>Julio 2022
+    script(src="https://gema.media/wp-content/themes/gema-media/js/gema.js") 

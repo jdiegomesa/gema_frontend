@@ -1,0 +1,77 @@
+/* Desarrollado por Juan Diego Mesa O. para la Gema Media
+juand.mesa@outlook.com
+juandiegomesa.com */
+
+:root{
+  /* Fuentes Desktop*/
+  --fuente7: 76px;
+  --fuente6: 61px;
+  --fuente5: 49px;
+  --fuente4: 39px;
+  --fuente3: 31px;
+  --fuente2: 25px;
+  --fuente1: 20px;
+  --fuente0: 16px;
+  --fuente-1: 13px;
+  --fuente-2: 10px;
+  --fuente-3: 8px;
+  /* Fuentes Tablet*/
+  --fuente7_tablet: 5.4vw;
+  --fuente6_tablet: 4.35vw;
+  --fuente5_tablet: 3.5vw;
+  --fuente4_tablet: 2.7vw;
+  --fuente3_tablet: 2.2vw;
+  --fuente2_tablet: 1.71vw;
+  --fuente1_tablet: 1.42vw;
+  --fuente0_tablet: 1.2vw;
+  --fuente-1_tablet: 0.93vw;
+  --fuente-2_tablet: 0.71vw;
+  --fuente-3_tablet: 0.57vw;
+  /* Fuentes Mobile*/
+  --fuente7_mobile: 19vw;
+  --fuente6_mobile: 15.25vw;
+  --fuente5_mobile: 12.25vw;
+  --fuente4_mobile: 8.5vw;
+  --fuente3_mobile: 7.8vw;
+  --fuente2_mobile: 6.25vw;
+  --fuente1_mobile: 5vw;
+  --fuente0_mobile: 4vw;
+  --fuente-1_mobile: 3.25vw;
+  --fuente-2_mobile: 2.5vw;
+  --fuente-3_mobile: 2vw;
+  // Sifilis
+  --fuenteExtraBig: 400px;
+  --fuenteExtraBig_mobile: 30vw;
+}
+
+// Colores
+$transparent: transparent;
+$blanco: #fff;
+$negro: #000;
+$gris_blanco: #F0F0F0;
+$gris_claro: #CECECE;
+$gris: #656565;
+$violeta: #801AAF;
+$violeta_oscuro: #64008C;
+$amarillo_claro: #FFDC00;
+$amarillo_oscuro: #FFA627;
+$color_fuente: #333;
+$azul_claro: #AEC1DD;
+$azul_violeta: #4A5AA4;
+$rojo_claro: #FF3B5F;
+$rojo_oscuro: #D84265;
+
+
+// Fuentes 
+$sans: 'Noto Sans', sans-serif;
+$serif: 'Noto Serif Display','Noto Serif', serif;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+
+@import './sass/index.scss';
+@import './sass/infonote.scss';
+@import './sass/sifilis.scss';

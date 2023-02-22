@@ -1,0 +1,836 @@
+.GemaInfonote{
+  width: 980px;
+  margin-left: calc(50vw - 390px);
+  @include mobile{
+    width: 75vw;
+    margin-left: 15vw;
+  }
+  &-header{
+    padding: 28px 0 14px;
+    border-bottom: solid var(--note_color) 3px;
+    @include mobile{
+      background: transparent var(--header_image) center no-repeat;
+      background-size: 80%;
+      padding: 35vh 0 5vw;
+      border-bottom: none;
+      margin-bottom: 0;
+      transition-duration: .5s;
+    }
+    &-text{
+      @include text($sans, -1);
+    }
+    &.outstanding{
+      @include mobile{
+        margin-bottom: 50vh;
+      }
+    }
+    &-head{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 14px 0 28px;
+      @include mobile{
+        padding: 3vw 0;
+        flex-direction: column;
+      }
+      &-title{
+        @include text($serif, 5, var(--note_color), $black);
+        line-height: 1;
+        font-style: italic;
+        margin: 0;
+        align-self: flex-start;
+        width: 550px;
+        @include mobile{
+          font-size: var(--fuente4_mobile);
+          width: 75vw;
+          padding-bottom: 4vw;
+        }
+      }
+      &-subtitle{
+        @include text($sans, 1, $negro, $regular);
+        font-style: italic;
+        margin: 0;
+        width: 400px;
+        align-self: flex-end;
+        @include mobile{
+          width: 75vw;
+          border-bottom: solid var(--note_color) .8vw;
+          padding-bottom: 5vw;
+        }
+      }
+    }
+  }
+  &-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: var(--fuente4) 0 200px;
+    @include mobile{
+      padding: var(--fuente4_mobile) 0 15vh;
+    }
+    &-text{
+      width: 620px;
+      position: relative;
+      &>p{
+        @include text($serif);
+        margin-bottom: var(--fuente1);
+        line-height: 1.4;
+      }
+      @include mobile{
+        width: 100%;
+      }
+    }
+    &-sidebar{
+      &-element{
+        position: fixed;
+        width: 260px;
+        right: calc(50vw - 590px);
+        top: 50px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: .5s;
+        @include mobile{
+          padding: var(--fuente0) 0;
+          position: static;
+          max-height: none;
+          opacity: 1;
+          width: 70vw;
+          display: block;
+          margin: 0 auto;
+        }
+        &.showed{
+          max-height: 100vh;
+          opacity: 1;
+        }
+        &-container{
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        &::after{
+          content: '';
+          padding-top: var(--fuente0);
+          display: block;
+          margin: 0 auto;
+          width: 30%;
+          height: 0;
+          border-bottom: solid $amarillo_claro 5px;
+        }
+        & img{
+          width: 100%;
+          @include mobile{
+            width: 75%;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        &-title{
+          @include text($sans, 6, $amarillo_claro, $black);
+          text-align: center;
+          width: 100%;
+          margin: var(--fuente-2) auto;
+          @include mobile{
+            font-size: var(--fuente6_mobile);
+            margin: var(--fuente-2_mobile) auto;
+          }
+        }
+        &-subtitle{
+          @include text($sans, 3, $violeta, $black);
+          text-align: center;
+          width: 100%;
+          margin: var(--fuente-2) auto;
+          @include mobile{
+            margin: var(--fuente-2_mobile) auto;
+          }
+        }
+        &-text{
+          @include text($sans, 1, $violeta);
+          margin: var(--fuente-2) auto;
+          text-align: center;
+          width: 100%;
+          @include mobile{
+            margin: var(--fuente-2_mobile) auto;
+            font-size: var(--fuente0_mobile);
+            width: 75%;
+          }
+        }
+        &-subtext{
+          @include text($sans, -1, $violeta);
+          padding-top: var(--fuente-2);
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+    &-imagetitle{
+      width: 100%;
+      position: relative;
+      padding: var(--fuente3) 0;
+      @include mobile{
+        padding: var(--fuente3_mobile) 0;
+      }
+      &-image{
+        width: 80%;
+        display: block;
+        margin-left: auto;
+      }
+      &-text{
+        @include text($serif, 5, var(--note_color), $black);
+        font-style: italic;
+        width: 55%;
+        margin: 0;
+        position: absolute;
+        bottom: var(--fuente3);
+        left: 0;
+        line-height: 1.1;
+        @include mobile{
+          bottom: var(--fuente3_mobile);
+          font-size: var(--fuente2_mobile);
+        }
+      }
+    }
+    &-fullimage{
+      width: 100%;
+      display: block;
+      margin: var(--fuente0) auto;
+      @include mobile{
+        margin: var(--fuente0_mobile) auto;
+      }
+    }
+    // Infografías
+    &-infog1{
+      border-top: solid $gris 1px;
+      border-bottom: solid $gris 1px;
+      padding: var(--fuente0) 0;
+      width: 620px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: var(--fuente0) auto;
+      @include mobile{
+        flex-direction: column;
+        width: 75vw;
+      }
+      &-content{
+        width: 220px;
+        padding-right: 20px;
+        @include mobile{
+          width: 75vw;
+          padding:0 0 var(--fuente0_mobile);
+        }
+        &-title{
+          @include text($sans, 2);
+          padding-bottom: var(--fuente1);
+          @include mobile{
+            padding-bottom: var(--fuente1_mobile);
+          }
+        }
+        &-text{
+          @include text($sans, 0);
+          padding-bottom: var(--fuente-1);
+          @include mobile{
+            padding-bottom: var(--fuente-1_mobile);
+          }
+        }
+      }
+      &-slider{
+        background-image: linear-gradient(bottom, $amarillo_claro, $amarillo_oscuro);
+        width: 350px;
+        padding: 40px 15px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        @include mobile{
+          width: 65vw;
+          padding: 10vw 5vw;
+        }
+        &-container{
+          width: max-content;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          transition-duration: .5s;
+        }
+        &-element{
+          width: 330px;
+          padding: 0 50px 0 10px;
+          @include mobile{
+            width: 55vw;
+            padding: 0 10vw 0 5vw; 
+          }
+          &-bigtitle{
+            @include text($sans, 7, $blanco, $bold);
+            text-align: center;
+          }
+          &-title{
+            @include text($sans, 3, $blanco, $bold);
+          }
+          &-text{
+           @include text;
+            padding-top: var(--fuente0);
+          }
+        }
+        &-arrow{
+          position: absolute;
+          right: 0;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          top: calc(50% - 15px);
+          @include mobile{
+            top: calc(50% - 4vw);
+          }
+          & img{
+            width: 30px;
+            transform: rotate(-90deg);
+            @include mobile{
+              width: 8vw;
+            }
+          }
+        }
+      }
+    }
+    &-infog2{
+      border-top: solid $gris 1px;
+      border-bottom: solid $gris 1px;
+      padding: var(--fuente0) 0;
+      width: 620px;
+      margin: var(--fuente0) auto;
+      @include mobile{
+        flex-direction: column;
+        width: 75vw;
+      }
+      &-title{
+        @include text($sans, 2);
+        padding-bottom: var(--fuente1);
+        @include mobile{
+          padding-bottom: var(--fuente1_mobile);
+        }
+      }
+      &-slider{
+        background-image: linear-gradient(bottom, $amarillo_claro, $amarillo_oscuro);
+        width: 620px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        @include mobile{
+          width: 65vw;
+          padding: 5vw;
+        }
+        &-container{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          @include mobile{
+            width: max-content;
+            transition-duration: .5s;
+          }
+        }
+        &-element{
+          width: 310px;
+          @include mobile{
+            width: 55vw;
+            padding: 0 5vw; 
+          }
+          &-title{
+            @include text($sans, 3, $blanco, $bold);
+          }
+          &-text{
+           @include text($sans, -1);
+            padding-top: var(--fuente0);
+          }
+          &:first-of-type{
+            border-right: solid $blanco 1px;
+            @include mobile{
+              border: none;
+            }
+          }
+          &-box{
+            width: 270px;
+            padding: 20px;
+            border-top: solid $blanco 1px;
+            @include mobile{
+              width: 55vw;
+              padding: 3vw 0;
+            }
+            &:first-of-type{
+              border-top: none;
+            }
+            &-title{
+              @include text($sans, 0, $negro, $bold);
+              padding-bottom: var(--fuente-1);
+            }
+            &-list{
+              &>li{
+                @include text;
+                padding-bottom: var(--fuente-3);
+                &:before{
+                  display: inline-block;
+                  vertical-align: middle;
+                  content: '';
+                  width: 8px;
+                  height: 8px;
+                  background-color: $blanco;
+                  border-radius: 50%;
+                  margin-right: 8px;
+                }
+              }
+            }
+            &-text{
+              @include text;
+            }
+          }
+        }
+        &-arrow{
+          display: none;
+          position: absolute;
+          right: 0;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          top: calc(50% - 15px);
+          @include mobile{
+            display: block;
+            top: calc(50% - 4vw);
+          }
+          & img{
+            width: 30px;
+            transform: rotate(-90deg);
+            @include mobile{
+              width: 8vw;
+            }
+          }
+        }
+      }
+    }
+    &-infog3{
+      position: relative;
+      padding: 28px 0;
+      @include mobile{
+        padding: 5vw 0;
+      }
+      &.title, &-title{
+        @include text($sans, 2);
+        padding-bottom: var(--fuente1);
+        @include mobile{
+          padding-bottom: var(--fuente1_mobile);
+        }
+      }
+      &-fullimage{
+        width: 620px;
+        @include mobile{
+          width: 75vw;
+        }
+      }
+      &-scroll{
+        width: 620px;
+        height: 245px;
+        overflow-x: scroll;
+        overflow-y: auto;
+        @include mobile{
+          width: 75vw;
+          height: 50vw;
+        }
+        &-img{
+          height: 100%;
+        }
+      }
+      &-arrow{
+        position: absolute;
+        bottom: 60px;
+        right: 10px;
+        transform: rotate(-90deg);
+        width: 40px;
+        @include mobile{
+          width: 7vw;
+          bottom: 9vw;
+        }
+      }
+    }
+  }
+  &-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .5);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    cursor: pointer;
+    display: none;
+    &.opened{
+      display: flex;
+    }
+    &-container{
+      background-color: rgba(0,0,0,.9);
+      border-radius: var(--fuente0);
+      padding: var(--fuente4);
+      cursor: auto;
+      @include mobile{
+        padding: 5vw;
+        max-height: 85vh;
+        overflow-y: auto;
+      }
+    }
+    &-text{
+      width: 700px;
+      @include text($sans, -1, $blanco, $regular);
+      margin-bottom: var(--fuente-2);
+      text-align: center;
+      @include mobile{
+        width: 80vw;
+      }
+    }
+    &-img{
+      width: 800px;
+      @include mobile{
+        width: 80vw;
+      }
+    }
+    &-names{
+      padding-bottom: var(--fuente1);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      @include mobile{
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: var(--fuente0_mobile);
+      }
+      &-item{
+        padding: var(--fuente0) var(--fuente-2);
+        @include mobile{
+          width: 36vw;
+          padding: 2vw;
+        }
+        &-title{
+          @include text($sans, 0, $blanco, $bold);
+          @include mobile{
+            padding-bottom: 2vw;
+          }
+        }
+        &-subtitle{
+          @include text($sans, -1, $blanco);
+          @include mobile{
+            font-size: var(--fuente-2_mobile);
+          }
+        }
+      }
+    }
+    &-logos{
+      position: relative;
+      z-index: 5;
+      width: 900px;
+      margin: 24px auto;
+      border-top: solid $blanco 1px;
+      padding-top: var(--fuente2);
+      @include mobile{
+        width: 80vw;
+        margin: 2vw auto;
+        padding-top: var(--fuente2_mobile);
+      }
+      &-elements{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: var(--fuente4);
+        @include mobile{
+          padding-bottom: var(--fuente-1_mobile);
+        }
+        &-item{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 0;
+          max-width: 33%;
+          justify-content: center;
+          align-items: center;
+          @include mobile{
+            max-width: 30vw;
+            align-items: flex-start;
+            margin-bottom: var(--fuente-2_mobile);
+          }
+          &-text{
+            width: 100%;
+            @include text($sans, -1, $blanco, $regular);
+            margin-bottom: var(--fuente1);
+            text-align: center;
+            @include mobile{
+              margin-bottom: var(--fuente-2_mobile);
+            }
+          }
+          &-image{
+            height: 58px;
+            max-width: 160px;
+            margin: 0 var(--fuente-3);
+            object-fit: contain;
+          }
+        }
+      }
+      &-text{
+        @include text($sans, -2, $blanco, $regular);
+        margin-bottom: var(--fuente-2);
+        text-align: center;
+      }
+    }
+  }
+  &-fixedbutton{
+    position: fixed;
+    transition-duration: .5s;
+    cursor: pointer;
+    &.big{
+      right: 0;
+      bottom: 2%;
+      height: 220px;
+      z-index: 10;
+      @include mobile{
+        height: 45vw;
+      }
+      &:hover{
+        bottom: calc(2% - 5px);
+        height: 225px;
+      }
+    }
+    &.small{
+      bottom: 30%;
+      height: 30px;
+      right: 30px;
+      z-index: 15;
+      @include mobile{
+        bottom: 5vh;
+        height: 7vw;
+        right: auto;
+        left: 4vw;
+      }
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    & img{
+      height: 100%;
+    }
+  }
+  &-mixed{
+    &-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--fuente0);
+      @include mobile{
+        flex-direction: column-reverse;
+        margin-bottom: var(--fuente0_mobile);
+      }
+    }
+    &-text{
+      width: 470px;
+      @include mobile{
+        width: 100%
+      }
+      & p{
+        @include text($serif);
+        line-height: 1.5;
+        padding-bottom: var(--fuente0);
+        @include mobile{
+          padding-bottom: var(--fuente0_mobile);
+        }
+        & span{
+          font-family: $sans;
+          font-weight: $bold;
+        }
+      }
+    }
+    &-img{
+      width: 470px;
+      @include mobile{
+        width: 100%;
+        margin: var(--fuente0) 0;
+      }
+    }
+  }
+  &-whiteline{
+    width: 100%;
+    border-top: solid $blanco 1px;
+  }
+  &-stretch{
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+    @include mobile{
+      width: 75vw;
+      padding: 5vw 0;
+    }
+    &>p{
+      @include text($serif, 0);
+      padding-bottom: var(--fuente0);
+      line-height: 1.5;
+      &>span{
+        font-family: $sans;
+        font-weight: $bold;
+      }
+      &.title{
+        text-transform: uppercase;
+        font-size: var(--fuente1);
+        @include mobile{
+          font-size: var(--fuente1_mobile);
+        }
+      }
+    }
+    &.sans{
+      &>p{
+        font-family: $sans;
+      }
+    }
+  }
+  &-twocolumn{
+    column-count: 2;
+    column-gap: 30px;
+    position: relative;
+    padding: 50px 0;
+    @include mobile{
+      column-count: 1;
+      padding: 5vw 0;
+    }
+    & p{
+      @include text($serif, 0);
+      padding-bottom: var(--fuente1);
+      line-height: 1.5;
+      &.GemaInfonote-twocolumn-capital{
+        @include text($sans, 7, $azul_violeta, $bold);
+        position: absolute;
+        left: -45px;
+        top: 50px;
+        line-height: 0.7;
+        font-size: 150px;
+        @include mobile{
+          position: static;
+          margin-bottom: 10vw;
+          font-size: 40vw;
+          text-align: center;
+          line-height: 0.7;
+          background: transparent var(--bg_image) center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    &>p>span{
+      font-family: $sans;
+      font-weight: $bold;
+    }
+  }
+  &-sticky{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px auto;
+    @include mobile{
+      flex-direction: column;
+      margin: 5vw auto;
+    }
+    &-content{
+      width: 450px;
+      @include mobile{
+        width: 100%;
+      }
+      & p{
+        @include text($serif);
+        padding-bottom: var(--fuente0);
+        line-height: 1.5;
+        & span{
+          font-family: $sans;
+          font-weight: $bold;
+        }
+      }
+      & img{
+        display: none;
+        @include mobile{
+          display: block;
+          width: 75vw;
+          margin: 3vw auto;
+        }
+      }
+    }
+    &-image{
+      width: 390px;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+  &-quot{
+    position: relative;
+    width: 790px;
+    margin: 0 auto var(--fuente4);
+    @include mobile{
+      width: 72vw;
+      margin: 0 0 var(--fuente1_mobile);
+    }
+    &-text{
+      @include text($serif, 5, var(--note_color), $black);
+      font-style: italic;
+      @include mobile{
+        font-size: var(--fuente3_mobile);
+      }
+    }
+    &-subtext{
+      @include text($sans, 2, $color_fuente, $light);
+      width: 70%;
+      margin: var(--fuente2) 0 0 0;
+      @include mobile{
+        font-size: var(--fuente1_mobile);
+        width: 100%;
+      }
+      & span{
+        font-weight: $bold;
+      }
+    }
+    &-icon{
+      position: absolute;
+      right: -125px;
+      bottom: 20px;
+      width: 250px;
+      z-index: -1;
+      @include mobile{
+        width: 35vw;
+        bottom: auto;
+        top: 3vw;
+        right: -30vw;
+      }
+    }
+  }
+  &-line{
+    background-color: var(--note_color);
+    width: 270px;
+    height: 6px;
+    border-radius: 20px;
+    margin: 50px auto;
+    @include mobile{
+      width: 40vw;
+      height: 1.5vw;
+      margin: 10vw auto;
+    }
+  }
+  &-fullimage{
+    width: 100vw;
+    display: block;
+    margin: 30px 0 30px calc(-50vw + 390px);
+    position: relative;
+    z-index: 15;
+    @include mobile{
+      margin: 10vw auto 0 -15vw;
+    }
+  }
+}

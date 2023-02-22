@@ -1,0 +1,61 @@
+-var title = 'Gema'
+
+doctype html
+html
+  include ./components/_head.pug
+  body
+    include ./components/_mainmenu.pug
+    h1.hidden Gema
+    section.GemaSlider
+      h2.hidden Últimos contenidos
+      .GemaSlider-container#GemasliderHome(data-position="1")
+        //- Slide
+        a(href="https://www.Gema.gov.co/Paginas/Inversiones-por-$130-000-millones-para-potenciar-desarrollo-turistico-y-social-de-Mompox.aspx")
+          .GemaSlider-element.GemaSlider-principal-element
+            picture
+              //- <!-- Imagen móvil -->
+              source( 
+                srcset="./img/ejemplo.jpg"
+                media="(max-width: 600px)"
+              )
+              //- <!-- Imagen de escritorio -->
+              source(
+                srcset="./img/ejemplo.jpg"
+                media="(min-width: 600px)"
+              )
+              img.GemaSlider-element-image(
+                src="./img/ejemplo.jpg" alt="Paisaje Golfo de Morrosquillo")
+            .GemaSlider-element-info
+              h3.GemaSlider-element-info-title Migrantes con derechos a la salud sexual y reproductiva
+              p.GemaSlider-element-info-button(href="") Ver el especial
+        //- Slide
+        a(href="https://www.Gema.gov.co/Paginas/Inversiones-por-$130-000-millones-para-potenciar-desarrollo-turistico-y-social-de-Mompox.aspx")
+          .GemaSlider-element.GemaSlider-principal-element
+            picture
+              //- <!-- Imagen móvil -->
+              source( 
+                srcset="./img/ej2.png"
+                media="(max-width: 600px)"
+              )
+              //- <!-- Imagen de escritorio -->
+              source(
+                srcset="./img/ej2.png"
+                media="(min-width: 600px)"
+              )
+              img.GemaSlider-element-image(
+                src="./img/ej2.png" alt="Paisaje Golfo de Morrosquillo")
+            .GemaSlider-element-info
+              h3.GemaSlider-element-info-title Migrantes con derechos a la salud sexual y reproductiva
+              p.GemaSlider-element-info-button(href="") Ver el especial
+      //- <!-- Botón atrás del slider -->
+      button.GemaSlider-button(aria-label="Ir a slider anterior" onclick="GemaprevSlide('GemasliderHome', 'GemaSlider-principal-element');")
+        img(src="./assets/down_white-arrow.svg" alt="Flecha a la izquierda")
+      
+      //-  <!-- Botón siguiente del slider -->
+      button.GemaSlider-button(aria-label="Ir a slider siguiente" onclick="GemanextSlide('GemasliderHome', 'GemaSlider-principal-element');")
+        img(src="./assets/down_white-arrow.svg" alt="Flecha a la derecha")
+      .GemaSlider-dots
+        //-  Botones del slider: se debe renderizar uno por cada elemento existente y cambiar el número que se envía como parámetro en la función
+        button.GemaSlider-dots-element.active(aria-label="Ir a slider número 1" onclick="GemagotoSlide('GemasliderHome', 'GemaSlider-principal-element', 1);")
+        button.GemaSlider-dots-element(aria-label="Ir a slider número 2" onclick="GemagotoSlide('GemasliderHome', 'GemaSlider-principal-element', 2);")
+    script(src="./gema.js") 
