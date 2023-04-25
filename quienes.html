@@ -40,24 +40,32 @@
   </head>
   <body>
     <nav class="GemaMainmenu" id="GemaMainmenu" onclick="validateTarget(Gemaopen, 'GemaMainmenu');">
-      <div class="GemaMainmenu-container">
-        <div class="GemaMainmenu-mobile"> <img class="GemaMainmenu-icon" src="./assets/gema_icon.png" alt="">
-          <button class="GemaMainmenu-hamb" onclick="Gemaopen('GemaMainmenu');"><img src="./assets/hamb_menu.svg" alt=""></button>
-        </div><a class="GemaMainmenu-logo" href="#"><img src="./assets/gema_white_text.png" alt=""></a>
+      <div class="GemaMainmenu-mobile"> 
+        <button class="GemaMainmenu-hamb" onclick="Gemaopen('GemaMainmenu');"><img src="./assets/hamb_menu.svg" alt=""></button><a href="#"><img class="GemaMainmenu-icon" src="./assets/gema_white_text.png" alt=""></a>
+        <button class="GemaMainmenu-hamb" onclick="Gemaopen('GemaShareMenu');"><img src="./assets/share_softgrey_icon.svg" alt=""></button>
+      </div>
+      <div class="GemaMainmenu-container"><a class="GemaMainmenu-logo" href="#"><img src="./assets/gema_white_text.png" alt=""></a>
         <ul class="GemaMainmenu-items"> <a href=""> 
             <li class="GemaMainmenu-items-element genero">Género <span></span></li></a><a href=""> 
             <li class="GemaMainmenu-items-element educacion">Educación<span></span></li></a><a href=""> 
             <li class="GemaMainmenu-items-element migracion">Migración <span></span></li></a><a href=""> 
             <li class="GemaMainmenu-items-element ambiente">Ambiente<span></span></li></a></ul>
         <div class="GemaMainmenu-footer"> <a class="GemaMainmenu-footer-who" href="./quienes.html">Quiénes somos </a>
-          <div class="GemaMainmenu-footer-social"><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/mail_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/instagram_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/twitter_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/facebook_softgrey_icon.svg" alt=""></a></div>
+          <div class="GemaMainmenu-footer-social"><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/mail_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/instagram_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/twitter_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/facebook_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/tiktok_softgrey_icon.svg" alt=""></a><a class="GemaMainmenu-footer-social-element" href=""><img src="./assets/linkedin_softgrey_icon.svg" alt=""></a></div>
         </div>
+      </div>
+      <div class="GemaMainmenu-share desktop" id="GemaShareMenu">
+        <p class="GemaMainmenu-share-text">Comparte</p>
+        <div class="GemaMainmenu-share-buttons"><a class="GemaMainmenu-share-buttons-element" href=""><img src="./assets/whatsapp_grey_icon.svg" alt=""></a><a class="GemaMainmenu-share-buttons-element" href=""><img src="./assets/facebook_grey_icon.svg" alt=""></a><a class="GemaMainmenu-share-buttons-element" href=""><img src="./assets/twitter_grey_icon.svg" alt=""></a><a class="GemaMainmenu-share-buttons-element" href=""><img src="./assets/linkedin_gery_icon.svg" alt=""></a></div>
       </div>
     </nav>
     <h1 class="hidden">Gema</h1>
     <section class="GemaQuienes">
-      <p class="GemaQuienes-text">GEMA es una nueva iniciativa periodística con sede en Colombia que cubre temas de género, educación, migración y ambiente. Somos:</p>
+      <div class="GemaQuienes-content">
+        <p>GEMA es una nueva iniciativa periodística con sede en Colombia que cubre temas de género, educación, migración y ambiente. Somos:</p>
+      </div>
       <div class="GemaQuienes-elements">
+        <p class="GemaQuienes-linetitle">Cofundador@s</p>
         <div class="GemaQuienes-elements-item" onclick="Gemaopen('modal');"><img class="GemaQuienes-elements-item-image" src="./img/LUISA_GOMEZ.png" alt="Luisa Fernanda Gómez">
           <div class="GemaQuienes-elements-item-content"> 
             <p class="GemaQuienes-elements-item-content-title">Luisa Fernanda Gómez Cruz</p>

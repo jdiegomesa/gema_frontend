@@ -1,9 +1,12 @@
 nav.GemaMainmenu#GemaMainmenu(onclick="validateTarget(Gemaopen, 'GemaMainmenu');")
+  .GemaMainmenu-mobile 
+    button.GemaMainmenu-hamb(onclick="Gemaopen('GemaMainmenu');")
+      img(src="./assets/hamb_menu.svg", alt="")
+    a(href="#")
+      img.GemaMainmenu-icon(src="./assets/gema_white_text.png", alt="")
+    button.GemaMainmenu-hamb(onclick="Gemaopen('GemaShareMenu');")
+      img(src="./assets/share_softgrey_icon.svg", alt="")
   .GemaMainmenu-container
-    .GemaMainmenu-mobile 
-      img.GemaMainmenu-icon(src="./assets/gema_icon.png", alt="")
-      button.GemaMainmenu-hamb(onclick="Gemaopen('GemaMainmenu');")
-        img(src="./assets/hamb_menu.svg", alt="")
     a.GemaMainmenu-logo(href="#")
       img(src="./assets/gema_white_text.png", alt="")
     ul.GemaMainmenu-items 
@@ -30,3 +33,18 @@ nav.GemaMainmenu#GemaMainmenu(onclick="validateTarget(Gemaopen, 'GemaMainmenu');
           img(src="./assets/twitter_softgrey_icon.svg", alt="") 
         a.GemaMainmenu-footer-social-element(href="")
           img(src="./assets/facebook_softgrey_icon.svg", alt="") 
+        a.GemaMainmenu-footer-social-element(href="")
+          img(src="./assets/tiktok_softgrey_icon.svg", alt="") 
+        a.GemaMainmenu-footer-social-element(href="")
+          img(src="./assets/linkedin_softgrey_icon.svg", alt="")
+  .GemaMainmenu-share.desktop#GemaShareMenu
+    p.GemaMainmenu-share-text Comparte
+    .GemaMainmenu-share-buttons
+      a.GemaMainmenu-share-buttons-element(href="")
+        img(src="./assets/whatsapp_grey_icon.svg", alt="") 
+      a.GemaMainmenu-share-buttons-element(href="")
+        img(src="./assets/facebook_grey_icon.svg", alt="") 
+      a.GemaMainmenu-share-buttons-element(href="")
+        img(src="./assets/twitter_grey_icon.svg", alt="") 
+      a.GemaMainmenu-share-buttons-element(href="")
+        img(src="./assets/linkedin_gery_icon.svg", alt="") 

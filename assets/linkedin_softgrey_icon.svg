@@ -1,0 +1,8 @@
+<svg id="IN" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <circle id="Elipse_15" data-name="Elipse 15" cx="24" cy="24" r="24" fill="#cecece"/>
+  <g id="Grupo_44" data-name="Grupo 44" transform="translate(13.714 12.571)">
+    <rect id="Rectángulo_55" data-name="Rectángulo 55" width="4.134" height="15.158" transform="translate(0.344 6.609)" fill="#2c2b2b"/>
+    <path id="Trazado_93" data-name="Trazado 93" d="M2.411,4.861A2.431,2.431,0,1,1,4.823,2.431,2.422,2.422,0,0,1,2.411,4.861" transform="translate(0 0)" fill="#2c2b2b"/>
+    <path id="Trazado_94" data-name="Trazado 94" d="M19.03,19.954H14.9V12.232c0-4.641-5.512-4.29-5.512,0v7.722H5.25V4.8H9.384V7.228C11.308,3.665,19.03,3.4,19.03,10.64Z" transform="translate(1.984 1.813)" fill="#2c2b2b"/>
+  </g>
+</svg>

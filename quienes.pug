@@ -7,8 +7,10 @@ html
     include ./components/_mainmenu.pug
     h1.hidden Gema
     section.GemaQuienes
-      p.GemaQuienes-text GEMA es una nueva iniciativa periodística con sede en Colombia que cubre temas de género, educación, migración y ambiente. Somos:
+      .GemaQuienes-content
+        p GEMA es una nueva iniciativa periodística con sede en Colombia que cubre temas de género, educación, migración y ambiente. Somos:
       .GemaQuienes-elements
+        p.GemaQuienes-linetitle Cofundador@s
         .GemaQuienes-elements-item(onclick="Gemaopen('modal');")
           img.GemaQuienes-elements-item-image(src="./img/LUISA_GOMEZ.png", alt="Luisa Fernanda Gómez")
           .GemaQuienes-elements-item-content 

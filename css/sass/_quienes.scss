@@ -8,11 +8,13 @@
   position: relative;
   background-color: $gris_oscuro;
   @include mobile{
-    width: 77vw;
-    margin-left: 15vw;
+    width: 100vw;
+    margin-left: 0;
+    margin-top: 7vh;
     padding: 0 4vw;
+    box-sizing: border-box;
   }
-  &-text{
+  &-content p{
     @include text($sans, 0, $blanco, $light);
     padding-top: 30px;
   }

@@ -1,0 +1,31 @@
+-var title = 'Reportaje'
+
+doctype html
+html
+  include ./components/_head.pug
+  body
+    include ./components/_mainmenu.pug
+    section.GemaReportaje
+      picture
+        //- <!-- Imagen móvil -->
+        source( 
+          srcset="./img/ejemplo.jpg"
+          media="(max-width: 600px)"
+        )
+        //- <!-- Imagen de escritorio -->
+        source(
+          srcset="./img/ejemplo.jpg"
+          media="(min-width: 600px)"
+        )
+        img.GemaReportaje-image(
+          src="./img/ejemplo.jpg" alt="Paisaje Golfo de Morrosquillo")
+      h1.GemaReportaje-title La sífilis se propaga Una falla del sistema de salud
+      p.GemaReportaje-author Por: Luisa Fernanda Gómez Cruz
+      p.GemaReportaje-resume En Colombia, cada día de 2021 cinco niños nacieron con esta infección, y cada dos días y medio de 2020, uno murió por esta causa. Las consecuencias en la salud pueden ser graves: desde retraso del crecimiento y desórdenes motores hasta sordera o ceguera.
+      .GemaReportaje-content
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ratione esse rem debitis ad itaque exercitationem repudiandae totam explicabo facilis, doloremque quod minus architecto ducimus amet consectetur quis. Neque, officia?
+        h2 Lorem ipsum dolor sit amet consectetur
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ratione esse rem debitis ad itaque exercitationem repudiandae totam explicabo facilis, doloremque quod minus architecto ducimus amet consectetur quis. Neque, officia?
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ratione esse rem debitis ad itaque exercitationem repudiandae totam explicabo facilis, doloremque quod minus architecto ducimus amet consectetur quis. Neque, officia?
+        img(src="./img/ejemplo.jpg" alt="Paisaje Golfo de Morrosquillo")
+    script(src="./gema.js") 

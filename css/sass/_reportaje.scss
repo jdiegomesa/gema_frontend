@@ -1,0 +1,78 @@
+.GemaReportaje{
+  margin-left: calc(15vw + 40px);
+  padding: 50px 0;
+  width: 1000px;
+  @include mobile{
+    width: 90vw;
+    margin: 0 auto;
+    padding: calc(7vh + 5vw) 0;
+  }
+  &-image{
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+    height: 474px;
+    @include mobile{
+      height: 90vw;
+      border-radius: 5vw;
+    }
+  }
+  &-title{
+    @include text($sans, 3, $violeta_oscuro, $bold);
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include mobile{
+      width: 90vw;
+      padding: 4vw 0;
+    }
+  }
+  &-author{
+    @include text($sans, -1);
+    width: 900px;
+    margin: 0 auto;
+    @include mobile{
+      width: 90vw;
+    }
+  }
+  &-resume{
+    @include text($sans, 1);
+    font-style: italic;
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include mobile{
+      width: 90vw;
+      padding: 4vw 0;
+    }
+  }
+  &-content{
+    width: 900px;
+    margin: 0 auto;
+    @include mobile{
+      width: 90vw;
+    }
+    &>p{
+      @include text;
+      padding-bottom: var(--fuente0);
+      @include mobile{
+        padding-bottom: var(--fuente0_mobile);
+      }
+    }
+    &>h2{
+      @include text($sans, 1, $violeta_oscuro, $bold);
+      padding-bottom: var(--fuente1);
+      @include mobile{
+        padding-bottom: var(--fuente1_mobile);
+      }
+    }
+    &>img{
+      display: block;
+      margin: 0 auto;
+      max-width: 900px;
+      @include mobile{
+        max-width: 90vw;
+      }
+    }
+  }
+}

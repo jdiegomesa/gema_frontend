@@ -3,6 +3,11 @@
   margin-left: 15vw;
   overflow-x: hidden;
   position: relative;
+  @include mobile{
+    width: 100vw;
+    margin-left: 0;
+    margin-top: 7vh;
+  }
   &-container{
     display: flex;
     width: max-content;
@@ -13,12 +18,49 @@
     width: 85vw;
     height: 100vh;
     position: relative;
+    @include mobile{
+      width: 100vw;
+      height: 93vh;
+    }
+    &-flag{
+      position: absolute;
+      background: url('../assets/white_flag.svg') no-repeat;
+      background-size: contain;
+      top: 0;
+      right: 100px;
+      box-sizing: border-box;
+      padding: 0 7px;
+      width: 100px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include mobile{
+        right: 10vw;
+        width: 23vw;
+        padding: 0 2vw;
+        height: 39vw;
+      }
+      &-text{
+        @include text($sans, -1, $negro, $bold);
+        margin-bottom: var(--fuente0);
+        @include mobile{
+          margin-bottom: var(--fuente0_mobile);
+        }
+      }
+      &-img{
+        width: 100%;
+      }
+    }
     &-image{
       width: 85vw;
       height: 100vh;
       object-fit: cover;
       display: block;
       @include mobile{
+        width: 100vw;
+        height: 93vh;
         // height: 186vw;
       }
     }
@@ -26,18 +68,20 @@
       position: absolute;
       z-index: 10;
       box-sizing: border-box;
-      padding: 40vh 15vw 0 35vw;
-      width: 85vw;
-      height: 100%;
-      top: 0;
-      left: 0;
+      width: 40vw;
+      top: 35vh;
+      left: 35vw;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       @include mobile{
+        width: 100vw;
+        bottom: 10vh;
+        left: 10vw;
+        width: 80vw;
+        top: auto;
         justify-content: flex-end;
         align-items: center;
-        padding: 65vh 10vw 0;
       }
       &-title{
         color: #fff;
@@ -76,6 +120,20 @@
           color: #000;
           text-align: center;
           padding:  0;
+        }
+      }
+      &-logos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: var(--fuente0) 0;
+        height: 50px;
+        @include mobile{
+          height: 10vw;
+        }
+        &-item{
+          height: 100%;
+          margin-right: var(--fuente2);
         }
       }
       &-button{
@@ -130,13 +188,21 @@
   }
   &-button{
     cursor: pointer;
-    width: 40px;
+    width: 65px;
+    height: 100vh;
     border: none;
-    background-color: transparent;
+    background: transparent;
     position: absolute;
-    top: calc(50vh - 20px);
+    top: 0;
+    transition-duration: 1s;
+    padding: 0 20px;
+    &:focus{
+      outline: none;
+    }
     @include mobile{
-      width: 6vw;
+      width: 10vw;
+      height: 93vh;
+      padding: 0 2vw;
     }
     & img{
       width: 100%;
@@ -145,12 +211,22 @@
       display: none;
     }
     &:first-of-type{
-      transform: rotate(90deg);
-      left: 2.5%;
+      left: 0;
+      & img{
+        transform: rotate(90deg);
+      }
+      &:hover{
+        background: linear-gradient(to left, transparent, #ffffff3f);
+      }
     }
     &:last-of-type{
-      transform: rotate(-90deg);
-      right: 2.5%;
+      right: 0;
+      & img{
+        transform: rotate(-90deg);
+      }
+      &:hover{
+        background: linear-gradient(to right, transparent, #ffffff3f);
+      }
     }
   }
   &-dots{
@@ -184,131 +260,6 @@
         height: 3vw;
         margin: 0 2vw;
         border-width: .7vw;
-      }
-    }
-  }
-}
-.UBPDSliderMini{
-  width: 620px;
-  overflow-x: hidden;
-  position: relative;
-  padding-bottom: var(--fuente1);
-  @include tablet{
-    padding-bottom: var(--fuente1_tablet);
-    width: 40vw;
-  }
-  @include mobile{
-    padding-bottom: var(--fuente1_mobile);
-    width: 90vw;
-  }
-  &-container{
-    display: flex;
-    width: max-content;
-    transition-duration: 1s;
-    will-change: transform;
-  }
-  &-element{
-    width: 620px;
-    position: relative;
-    @include tablet{
-      width: 44.28vw;
-    }
-    @include mobile{
-      width: 90vw;
-    }
-    &-image{
-      width: 620px;
-      height: 290.62px;
-      object-fit: cover;
-      display: block;
-      @include tablet{
-        width: 44.28vw;
-        height: 20.75vw;
-      }
-      @include mobile{
-        width: 90vw;
-        height: 42.18vw;
-      }
-    }
-    &-info{
-      z-index: 10;
-      box-sizing: border-box;
-      padding: var(--fuente0) 0;
-      width: 100%;
-      min-height: calc(var(--fuente0) * 3);
-      color: var(--color_texto);
-      font-family: var(--texto);
-      font-weight: var(--regular);
-      font-size: var(--fuente0);
-      @include tablet{
-        font-size: var(--fuente0_tablet);
-        min-height: calc(var(--fuente0_tablet) * 3);
-      }
-      @include mobile{
-        font-size: var(--fuente0_mobile);
-        min-height: calc(var(--fuente0_mobile) * 3);
-      }
-    }
-  }
-  &-buttons{
-    position: relative;
-    padding: 10px 0 0;
-    margin: 0 auto;
-    max-width: 1280px;
-    @include mobile{
-      display: flex;
-      flex-direction: column-reverse;
-    }
-    &-controls{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 0 auto;
-      width: fit-content;
-      &-button{
-        cursor: pointer;
-        width: 30px;
-        border: none;
-        background-color: transparent;
-        @include mobile{
-          width: 6vw;
-        }
-        & img{
-          width: 100%;
-        }
-        & .pause{
-          display: none;
-        }
-      }
-    }
-    &-dots{
-      width: fit-content;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 0 16px;
-      @include mobile{
-        margin: 0 auto;
-      }
-      &-element{
-        cursor: pointer;
-        border: solid 2px var(--aguamarina);
-        border-radius: 50%;
-        margin: 0 10px;
-        width: 15px;
-        height: 15px;
-        background-color: transparent;
-        padding: 0;
-        &.active{
-          background-color: var(--aguamarina);
-        }
-        @include mobile{
-          width: 4vw;
-          height: 4vw;
-          margin: 0 2vw;
-          border-width: .7vw;
-        }
       }
     }
   }
